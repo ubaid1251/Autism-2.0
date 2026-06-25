@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.iOS;
+//using UnityEngine.iOS;
 
 public class RateUsHandler : MonoBehaviour
 {
@@ -30,7 +30,7 @@ public class RateUsHandler : MonoBehaviour
         //IntitializeAdmob.instance.ShowBanner();//remove later
         PlayerPrefs.SetInt("RateDone", 1);
         rate.SetActive(false);
-        Device.RequestStoreReview();
+     //   Device.RequestStoreReview();
     }
 
     public void cross()
