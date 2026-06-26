@@ -1,0 +1,5 @@
+/Users/sameen/Documents/GitHub/Autism-2.0/.utmp/RelWithDebInfo/3r3fti6p/armeabi-v7a/CMakeFiles/edit_cache.dir
+/Users/sameen/Documents/GitHub/Autism-2.0/.utmp/RelWithDebInfo/3r3fti6p/armeabi-v7a/CMakeFiles/rebuild_cache.dir
+/Users/sameen/Documents/GitHub/Autism-2.0/.utmp/RelWithDebInfo/3r3fti6p/armeabi-v7a/FramePacing/CMakeFiles/swappywrapper.dir
+/Users/sameen/Documents/GitHub/Autism-2.0/.utmp/RelWithDebInfo/3r3fti6p/armeabi-v7a/FramePacing/CMakeFiles/edit_cache.dir
+/Users/sameen/Documents/GitHub/Autism-2.0/.utmp/RelWithDebInfo/3r3fti6p/armeabi-v7a/FramePacing/CMakeFiles/rebuild_cache.dir

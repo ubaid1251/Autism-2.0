@@ -1,0 +1,5 @@
+# ninja log v5
+585	808	1782416933965495758	/Users/sameen/Documents/GitHub/Autism-2.0/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/3r3fti6p/obj/arm64-v8a/libswappywrapper.so	cd3d5b6cb15bdab6
+0	583	1782416933741502486	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	4ff8cd7915b2916b
+1	1028	1782417133446834064	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	4ff8cd7915b2916b
+1029	1499	1782417133916460539	/Users/sameen/Documents/GitHub/Autism-2.0/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/3r3fti6p/obj/arm64-v8a/libswappywrapper.so	cd3d5b6cb15bdab6
