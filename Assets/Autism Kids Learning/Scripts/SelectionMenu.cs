@@ -97,4 +97,10 @@ public class SelectionMenu : MonoBehaviour
     {
         parental.SetActive(true);
     }
+    public void OpenLink(string link)
+    {
+        SoundManager.instance.PlayEffect_Instance(7);
+
+        Application.OpenURL(link);
+    }
 }
