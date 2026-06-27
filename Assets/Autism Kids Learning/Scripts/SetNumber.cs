@@ -37,7 +37,7 @@ public class SetNumber : MonoBehaviour
     public void IncreaseCount()
     {
         SoundManager.instance.PlayEffect_Instance(4);
-        if (SceneManager.GetActiveScene().name == "Fruit" || SceneManager.GetActiveScene().name == "Vegatables" || SceneManager.GetActiveScene().name == "Objects")
+        if (SceneManager.GetActiveScene().name == "Fruit" || SceneManager.GetActiveScene().name == "Vegetables" || SceneManager.GetActiveScene().name == "Objects")
         {
             limitnum=6;
         }

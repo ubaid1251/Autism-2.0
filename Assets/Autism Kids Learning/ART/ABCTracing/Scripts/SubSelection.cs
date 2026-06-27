@@ -63,8 +63,8 @@ public class SubSelection : MonoBehaviour
         PlayerPrefs.SetInt("RemoveAdds", 1);
         if (PlayerPrefs.GetInt("RemoveAdds") == 1)
         {
-            adult.DOAnchorPosY(-100, 0);
-            setting.DOAnchorPosY(-100, 0);
+            adult.DOAnchorPosY(-130, 0);
+            setting.DOAnchorPosY(-130, 0);
             Titleobj.DOAnchorPosY(-150, 0);
             banner.gameObject.SetActive(false);
             //for (int i = 0; i < title.Length; i++)

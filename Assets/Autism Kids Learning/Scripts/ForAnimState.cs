@@ -8,7 +8,7 @@ public class ForAnimState : MonoBehaviour
     // Start is called before the first frame update
     void OffGameObj()
     {
-        if (SceneManager.GetActiveScene().name == "Fruit" || SceneManager.GetActiveScene().name == "Vegatables")
+        if (SceneManager.GetActiveScene().name == "Fruit" || SceneManager.GetActiveScene().name == "Vegetables")
         {
             SetFruits.ins.EndCall();
         }
@@ -39,7 +39,7 @@ public class ForAnimState : MonoBehaviour
     {
         transform.GetChild(1).gameObject.SetActive(false);
         yield return new WaitForSeconds(0.2f);
-        if (SceneManager.GetActiveScene().name == "Fruit" || SceneManager.GetActiveScene().name == "Vegatables")
+        if (SceneManager.GetActiveScene().name == "Fruit" || SceneManager.GetActiveScene().name == "Vegetables")
         {
             SetFruits.ins.EndCall();
         }

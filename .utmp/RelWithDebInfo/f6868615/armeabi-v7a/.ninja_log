@@ -1,0 +1,5 @@
+# ninja log v5
+1	271	8042117842706539	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	6786f2c08e86823d
+279	461	8042117844661147	C:/Users/TQ/Documents/GitHub/Candy-Merge/Autism-2.0/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/f6868615/obj/armeabi-v7a/libswappywrapper.so	d9321b63d373bfa1
+2	221	8042225867425899	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	6786f2c08e86823d
+222	409	8042225869368680	C:/Users/TQ/Documents/GitHub/Candy-Merge/Autism-2.0/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/f6868615/obj/armeabi-v7a/libswappywrapper.so	d9321b63d373bfa1

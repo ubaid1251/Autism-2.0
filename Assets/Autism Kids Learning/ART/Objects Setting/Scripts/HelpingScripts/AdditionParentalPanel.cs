@@ -19,7 +19,7 @@ public class AdditionParentalPanel : MonoBehaviour
     public Button[] buttons;
     public bool buy = false;
     //public InAppCalling_CB buyP;
-    public bool terms = false, isPrivacy = false;
+    public bool terms = false, isPrivacy;
     private void OnEnable()
     {
         for (int i = 0; i < buttons.Length; i++)
@@ -69,23 +69,21 @@ public class AdditionParentalPanel : MonoBehaviour
         if (answer == val)
         {
 
-            if (activeObject)
-            {
-                activeObject.SetActive(true);
+            //if (activeObject)
+            //{
+            //    activeObject.SetActive(true);
 
-            }
-            else if (buy)
+            //}
+            //else if (buy)
+            //{
+            //    //buyP.BuyInApp();
+            //}
+            if (isPrivacy)
             {
-                //buyP.BuyInApp();
+                Application.OpenURL("https://sites.google.com/view/amasconsultant-privacy-policy/home");
             }
-            else if (terms)
-            {
-                Application.OpenURL("https://muhammadubaidprivacy.blogspot.com/2025/06/terms-of-use.html");
-            }
-            else if (isPrivacy)
-            {
-                Application.OpenURL("https://muhammadubaidprivacy.blogspot.com/2025/06/privacy-policy.html");
-            }
+
+
 
         }
         else
@@ -137,4 +135,9 @@ public class AdditionParentalPanel : MonoBehaviour
             s.Play();
         }
     }
+    //else if (terms)
+    //{
+    //    ////Application.OpenURL("https://muhammadubaidprivacy.blogspot.com/2025/06/terms-of-use.html");
+    //    ///Application.OpenURL("https://muhammadubaidprivacy.blogspot.com/2025/06/privacy-policy.html");
+    //}
 }

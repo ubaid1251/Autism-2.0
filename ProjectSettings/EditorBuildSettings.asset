@@ -39,9 +39,6 @@ EditorBuildSettings:
     path: Assets/Autism Kids Learning/Scenes/VegetablesSounds.unity
     guid: 9a999cf7ffbdd1a42b08503e726d549d
   - enabled: 1
-    path: Assets/Autism Kids Learning/Scenes/PurchasePanel_New.unity
-    guid: 851bcd557e6dcac4db2814a7ed2ee2a3
-  - enabled: 1
     path: Assets/Autism Kids Learning/Scenes/ColorGame.unity
     guid: a03806cb1771a3c4abf55918a4905547
   - enabled: 1

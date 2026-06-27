@@ -42,7 +42,7 @@ public class ABCManager : MonoBehaviour
         //}
         //else
         {
-            home.DOAnchorPosY(-100, 0);
+            home.DOAnchorPosY(-130, 0);
             banner.gameObject.SetActive(false);
         }
 

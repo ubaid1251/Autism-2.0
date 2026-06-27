@@ -16,7 +16,7 @@ public class SetNewPos : MonoBehaviour
         rectTransform = GetComponent<RectTransform>();
         targetPos = posObj.transform.GetComponent<RectTransform>().position;
         
-        if (SceneManager.GetActiveScene().name == "Fruit" || SceneManager.GetActiveScene().name == "Vegatables")
+        if (SceneManager.GetActiveScene().name == "Fruit" || SceneManager.GetActiveScene().name == "Vegetables")
         {
             //print("InSet Pos = " + SetFruits.ins.FruitCount);
             SetFruits.ins.FruitCount++;
@@ -44,10 +44,10 @@ public class SetNewPos : MonoBehaviour
 
         // Ensure the final position is exactly the target position
         rectTransform.position = target;
+
         
 
-
-        if (SceneManager.GetActiveScene().name == "Fruit" || SceneManager.GetActiveScene().name == "Vegatables")
+        if (SceneManager.GetActiveScene().name == "Fruit" || SceneManager.GetActiveScene().name == "Vegetables")
         {
             if (SetFruits.ins.FruitCount == SetNumber.Count)
             {
