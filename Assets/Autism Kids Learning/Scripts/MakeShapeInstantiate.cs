@@ -8,6 +8,7 @@ public class MakeShapeInstantiate : MonoBehaviour
     GameObject Obj;
     
     public GameObject ParentObj,PosObj;
+    public GameObject TitleObj, Board;
     void Start()
     {
         Obj = GameController.ins.ActiveShape;
@@ -15,6 +16,20 @@ public class MakeShapeInstantiate : MonoBehaviour
         Invoke("wait1", 1.5f);
     }
 
+
+    private void Awake()
+    {
+
+        if (PlayerPrefs.GetInt("RemoveAds") == 1)
+        {
+            TitleObj.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, -124, 0);
+            Board.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(-14.5f, 6f, 0);
+            //Board.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(12, -132, 0);
+
+       //     Bar.transform.GetComponent<RectTransform>().localScale = new Vector3(0.85f, 0.8f, 0.85f);
+         //   Board.transform.GetComponent<RectTransform>().sizeDelta = new Vector2(1090.2f, 748.42f);
+        }
+    }
     // Update is called once per frame
     void wait1()
     {

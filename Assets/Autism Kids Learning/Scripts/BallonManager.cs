@@ -20,12 +20,17 @@ public class BallonManager : MonoBehaviour
     public Vector2 spawnRangeX = new Vector2(-300f, 300f);
     public Vector2 spawnRangeY = new Vector2(-500f, 500f);
     public Sprite[] BallonSprites;
-    public GameObject nextbtn,GameOverpopUp;
+    public GameObject nextbtn,GameOverpopUp, UI_Obj;
     public ParticleSystem BallonPop;
     private void Awake()
     {
             Instance = this;
-            bestScore = PlayerPrefs.GetInt("BestScore", 0);
+        if (PlayerPrefs.GetInt("RemoveAds") == 1)
+        {
+            UI_Obj.transform.GetComponent<RectTransform>().sizeDelta = new Vector3(0f, 0f);
+            UI_Obj.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, 0, 0);
+        }
+        bestScore = PlayerPrefs.GetInt("BestScore", 0);
             UpdateScoreTexts();
             SoundManager.instance.PlayEffect_Instance(13);
     }

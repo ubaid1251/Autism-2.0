@@ -8,10 +8,23 @@ public class SetPuzzleCount : MonoBehaviour
     public static int Count = 2; // Default value
     public GameObject Gameplay,GotoGame;
     public TMP_Text counterNumber;
-
+    public GameObject SxPiec,home,Scroler;
     private void Awake()
     {
+
         ins = this;
+        if (PlayerPrefs.GetInt("RemoveAds") == 1)
+        {
+            transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, 0, 0);
+            GotoGame.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, 0, 0);
+            SxPiec.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(34,21f, 0);
+            SxPiec.transform.GetComponent<RectTransform>().localScale = new Vector3(0.8f, 0.8f, 0);
+            home.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(122f, -103f, 0);
+            Scroler.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(34, 8f, 0);
+            Scroler.transform.GetComponent<RectTransform>().localScale = new Vector3(1f, 1f, 1);
+            Scroler.transform.GetComponent<RectTransform>().sizeDelta = new Vector3(1271f, 909f);
+
+        }
     }
 
     private void Start()

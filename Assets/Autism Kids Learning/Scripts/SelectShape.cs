@@ -7,12 +7,19 @@ using DG.Tweening;
 public class SelectShape : MonoBehaviour
 {
     public GameObject[] AllShapes;
+    public GameObject UI_Obj,Shps;
+
     static int ShapeunlockNum,TickOnNum;
     //public GameObject Loading;
     public static SelectShape ins;
     private void Awake()
     {
         ins = this;
+        if (PlayerPrefs.GetInt("RemoveAds") == 1)
+        {
+            UI_Obj.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, 0, 0);
+            Shps.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, -437, 0);
+        }
         //PlayerPrefs.SetInt("UnlockAll", 1);
     }
     void Start()

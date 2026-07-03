@@ -21,8 +21,8 @@ public class RhymeManager : MonoBehaviour
         }
         else
         {
-            //home.DOAnchorPosY(-100, 0);
-            //music.DOAnchorPosY(-280, 0);
+            home.DOAnchorPosY(-130, 0);
+            music.DOAnchorPosY(-130, 0);
             progression.DOAnchorPosY(-100, 0);
             banner.gameObject.SetActive(false);
         }

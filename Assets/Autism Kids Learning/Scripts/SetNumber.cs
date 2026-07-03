@@ -13,6 +13,17 @@ public class SetNumber : MonoBehaviour
     private void Awake()
     {
         ins = this;
+        if (PlayerPrefs.GetInt("RemoveAds") == 1)
+        {
+            transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(-253, 0, 0);
+            transform.GetComponent<RectTransform>().localScale = new Vector3(0.92f, 0.92f, 0.92f);
+
+            if (SceneManager.GetActiveScene().name == "Fruit" || SceneManager.GetActiveScene().name == "CountObjects" ||  SceneManager.GetActiveScene().name == "Vegetables")
+            {
+                transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, 0, 0);
+            }
+        }
+
     }
 
     private void Start()

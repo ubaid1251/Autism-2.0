@@ -453,7 +453,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -122, y: -103}
+  m_AnchoredPosition: {x: -122, y: -286}
   m_SizeDelta: {x: 191, y: 186}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &109998458
@@ -5543,7 +5543,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -42}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1950129833
@@ -5667,6 +5667,8 @@ MonoBehaviour:
   - Find Lychee
   NameBar: {fileID: 374194871}
   Confeti: {fileID: 296845177}
+  home: {fileID: 2057892676}
+  Parent_Obj: {fileID: 1908455141}
 --- !u!1 &1973378860
 GameObject:
   m_ObjectHideFlags: 0
@@ -7134,15 +7136,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1633511763914158852, guid: 208222515295c5a4d9b269c4f8f5567c, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.9234
+      value: 0.86
       objectReference: {fileID: 0}
     - target: {fileID: 1633511763914158852, guid: 208222515295c5a4d9b269c4f8f5567c, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.9234
+      value: 0.86
       objectReference: {fileID: 0}
     - target: {fileID: 1633511763914158852, guid: 208222515295c5a4d9b269c4f8f5567c, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.9234
+      value: 0.86
       objectReference: {fileID: 0}
     - target: {fileID: 1633511763914158852, guid: 208222515295c5a4d9b269c4f8f5567c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7178,7 +7180,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1633511763914158852, guid: 208222515295c5a4d9b269c4f8f5567c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -101
       objectReference: {fileID: 0}
     - target: {fileID: 1633511763914158852, guid: 208222515295c5a4d9b269c4f8f5567c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -7404,7 +7406,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4563366823015972318, guid: 7b965500a35ba3244b9beed661da34a7, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -103
+      value: -286
       objectReference: {fileID: 0}
     - target: {fileID: 4563366823015972318, guid: 7b965500a35ba3244b9beed661da34a7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

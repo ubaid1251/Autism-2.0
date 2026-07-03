@@ -16,9 +16,11 @@ public class SetFruits : MonoBehaviour
     public GameObject[] Shadows;
     public static SetFruits ins;
     public bool Ballon=false;
+
     void Start()
     {
         ins = this;
+
         if (SetNumber.Count >= 2)
         {
             ShuffleChildren();

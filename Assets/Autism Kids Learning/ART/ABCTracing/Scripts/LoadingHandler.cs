@@ -13,7 +13,7 @@ public class LoadingHandler : MonoBehaviour
     public bool staticInter = false;
     private void OnEnable()
     {
-        if (PlayerPrefs.GetInt("RemoveAdds") == 1)
+        if (PlayerPrefs.GetInt("RemoveAds") == 1)
         {
             if (ActiveAfter != null)
             {
@@ -58,7 +58,7 @@ public class LoadingHandler : MonoBehaviour
     }
     public void EndAnim()
     {
-        if (PlayerPrefs.GetInt("RemoveAdds") == 0&&showBannerEnd)
+        if (PlayerPrefs.GetInt("RemoveAds") == 0&&showBannerEnd)
         {
             if (SceneManager.GetActiveScene().name == "ColorGamePlay")
             {

@@ -22,8 +22,15 @@ public class FindObject : MonoBehaviour
     public string[] ShapesNames;
     public GameObject NameBar;
     public ParticleSystem Confeti;
+    public RectTransform home,Parent_Obj;
     void Start()
     {
+        if (PlayerPrefs.GetInt("RemoveAds") == 1)
+        {
+            home.DOAnchorPosY(-103, 0);
+            SoundBtn.GetComponent<RectTransform>().DOAnchorPosY(-103, 0);
+            Parent_Obj.anchoredPosition = new Vector3(0, 0, 0);
+        }
         ShuffleChildren();
         ins = this;
         // InstantiateFruits();

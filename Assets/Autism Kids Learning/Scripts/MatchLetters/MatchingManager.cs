@@ -23,12 +23,17 @@ public class MatchingManager : MonoBehaviour
     [HideInInspector] public AudioSource myS, mainCam;
     public GameObject completion;
     public GameObject banner;
-    public RectTransform home;
+    public RectTransform home,Sound;
     public int num1 = 12;
     public int num2 = 11;
     private void Start()
     {
-        
+        if (PlayerPrefs.GetInt("RemoveAds") == 1)
+        {
+            home.DOAnchorPosY(-130, 0);
+            Sound.DOAnchorPosY(-130, 0);
+        }
+
         mainCam = Camera.main.GetComponent<AudioSource>();
         mainCam.clip = allbg[Random.Range(0, allbg.Length)];
         if (mainCam.enabled)

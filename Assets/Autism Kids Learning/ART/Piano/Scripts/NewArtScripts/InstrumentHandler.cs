@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-
+using DG.Tweening;
 public class InstrumentHandler : MonoBehaviour
 {
     
@@ -13,10 +13,12 @@ public class InstrumentHandler : MonoBehaviour
     public Button autoplay;
     public static int SelectedIndex;
     public static InstrumentHandler instance;
-    
+
+
     private void Start()
     {
         instance = this;
+
         if (gameObject.name == "All Scene")
         {
             /*for (int i = 0; i < AllScene.Count; i++)

@@ -7,7 +7,11 @@ public class PlayObjectsSounds : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (PlayerPrefs.GetInt("RemoveAds") == 1)
+        {
+            transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, 0, 0);
+            transform.GetComponent<RectTransform>().localScale = new Vector3(1f, 1f, 1f);
+        }
     }
 
     // Update is called once per frame
@@ -25,13 +29,13 @@ public class PlayObjectsSounds : MonoBehaviour
         {
             SoundManager.instance.PlayAnimalEffect_Complete(3);
         }
-        else if (name == "hen")
+        else if (name == "chick")
         {
-            SoundManager.instance.PlayAnimalEffect_Complete(5);
+            SoundManager.instance.PlayAnimalEffect_Complete(1);
         }
-        else if (name == "frog")
+        else if (name == "panda")
         {
-            SoundManager.instance.PlayAnimalEffect_Complete(4);
+            SoundManager.instance.PlayAnimalEffect_Complete(9);
         }
         else if (name == "monkey")
         {

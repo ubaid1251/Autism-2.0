@@ -14,7 +14,7 @@ public class MainSelection : MonoBehaviour
     public RectTransform adult, setting, noAds,banner,mainCards;
     void Start()
     {
-        if (PlayerPrefs.GetInt("RemoveAdds") == 1)
+        if (PlayerPrefs.GetInt("RemoveAds") == 1)
         {
             adult.DOAnchorPosY(-100, 0);
             mainCards.DOAnchorPosY(450, 0);
@@ -22,11 +22,11 @@ public class MainSelection : MonoBehaviour
             noAds.gameObject.SetActive(false);
             banner.gameObject.SetActive(false);
         }
-        if (PlayerPrefs.GetInt("RemoveAdds") == 0&& ResCheck.ResolutionType == ResType.tab)
+        if (PlayerPrefs.GetInt("RemoveAds") == 0&& ResCheck.ResolutionType == ResType.tab)
         {
             content.DOAnchorPosY(500, 0);
         }
-        else if(PlayerPrefs.GetInt("RemoveAdds") == 1 && ResCheck.ResolutionType == ResType.tab)
+        else if(PlayerPrefs.GetInt("RemoveAds") == 1 && ResCheck.ResolutionType == ResType.tab)
         {
             content.DOAnchorPosY(600, 0);
         }

@@ -60,8 +60,8 @@ public class SubSelection : MonoBehaviour
     }
     void Start()
     {
-        PlayerPrefs.SetInt("RemoveAdds", 1);
-        if (PlayerPrefs.GetInt("RemoveAdds") == 1)
+       // PlayerPrefs.SetInt("RemoveAdds", 1);
+        if (PlayerPrefs.GetInt("RemoveAds") == 1)
         {
             adult.DOAnchorPosY(-130, 0);
             setting.DOAnchorPosY(-130, 0);

@@ -8,6 +8,18 @@ public class SetChoices : MonoBehaviour
     public static int Count = 2; // Default value
     //public GameObject Gameplay;
     public TMP_Text counterNumber;
+    public GameObject home, EndPr;
+
+    private void Awake()
+    {
+
+        if (PlayerPrefs.GetInt("RemoveAds") == 1)
+        {
+            EndPr.transform.GetComponent<RectTransform>().sizeDelta = new Vector3(0f, 0f);
+            EndPr.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, 0, 0);
+            home.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(151f, -123f, 0);
+        }
+    }
     private void Start()
     {
         //Count = 2;

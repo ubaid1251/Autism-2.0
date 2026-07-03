@@ -119,6 +119,119 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &346728923
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 346728925}
+  - component: {fileID: 346728924}
+  m_Layer: 0
+  m_Name: Firebase
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &346728924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 346728923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceff177adbec860469de5898255a18a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firebaseInitialized: 0
+  isBanner: 0
+  removeInter: 0
+--- !u!4 &346728925
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 346728923}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &647913199
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 647913201}
+  - component: {fileID: 647913200}
+  m_Layer: 0
+  m_Name: Admob
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &647913200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 647913199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc93ee9fe40c3654ea03ae69c0bf401a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showLog: 1
+  AdmobTestIds: 0
+  admobAppID: ca-app-pub-4103477709439075~8587024885
+  BannerData:
+    bannerAdUnitIds: ca-app-pub-4103477709439075/1133287680
+    secondBannerAdUnitIds: 
+    BadsPosition: 0
+    secondBadsPosition: 0
+    bannerType: 3
+    secondBannerType: 3
+  InterData:
+    admobInterstialID: ca-app-pub-4103477709439075/2717832093
+    admobInterstialStaticID: 
+  Delay_Time: 0
+  get_touch: 0
+  IsPlay_Count: 1
+  play_ad: 0
+  BannerFailed: 0
+  secondBannerFailed: 0
+  InterFailed: 0
+  staticInterFailed: 0
+  twoBanners: 0
+--- !u!4 &647913201
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 647913199}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1116011370 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8313232266804718512, guid: 21638bafc029747c5ba95b5aa8a69390, type: 3}
@@ -643,3 +756,5 @@ SceneRoots:
   m_Roots:
   - {fileID: 1379334826}
   - {fileID: 1702932224}
+  - {fileID: 647913201}
+  - {fileID: 346728925}

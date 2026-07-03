@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 using UnityEngine.SceneManagement;
 public class SelectionMenu : MonoBehaviour
 {
@@ -9,9 +10,14 @@ public class SelectionMenu : MonoBehaviour
     public Color[] BgColors;
     public GameObject[] Colors,LockColors;
     public GameObject pnel,parental;
-    public GameObject ProfilerBtns;
+    public GameObject ProfilerBtns,UI_Obj,Selection;
     private void Awake()
     {
+        if (PlayerPrefs.GetInt("RemoveAds") == 1)
+        {
+            UI_Obj.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, 0, 0);
+            Selection.transform.GetComponent<RectTransform>().DOLocalMove(new Vector3(0f,-66f,0), 0.1f);
+        }
         if (PlayerPrefs.GetInt("Purchased") == 1)
         {
             for (int i = 0; i < LockColors.Length; i++)
@@ -34,7 +40,7 @@ public class SelectionMenu : MonoBehaviour
         PlayerPrefs.SetInt("countObjScene", 0);
         PlayerPrefs.SetInt("StartMatch", 0);
         PlayerPrefs.SetInt("DestMatch", 2);
-        PlayerPrefs.SetInt("RemoveAds", 1);
+        //PlayerPrefs.SetInt("RemoveAds", 1);
         PlayerPrefs.SetInt("BuyShape", 0);
 
         //if (RateUsHandler.Instance.CheckRateCondition())

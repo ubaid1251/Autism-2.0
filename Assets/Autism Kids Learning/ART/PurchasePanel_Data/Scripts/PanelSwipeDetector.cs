@@ -1,5 +1,6 @@
 using System;
 using DG.Tweening;
+using Firebase.Analytics;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;

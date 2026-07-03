@@ -12,15 +12,15 @@ public class ModeScroll : MonoBehaviour
     
     private void OnEnable()
     {
-        if (PlayerPrefs.GetInt("RemoveAdds") == 1&& ResCheck.ResolutionType != ResType.tab)
+        if (PlayerPrefs.GetInt("RemoveAds") == 1&& ResCheck.ResolutionType != ResType.tab)
         {
             content.DOAnchorPosY(450, 0);
         }
-        if (PlayerPrefs.GetInt("RemoveAdds") == 0&& ResCheck.ResolutionType == ResType.tab)
+        if (PlayerPrefs.GetInt("RemoveAds") == 0&& ResCheck.ResolutionType == ResType.tab)
         {
             content.DOAnchorPosY(500, 0);
         }
-        else if (PlayerPrefs.GetInt("RemoveAdds") == 1 && ResCheck.ResolutionType == ResType.tab)
+        else if (PlayerPrefs.GetInt("RemoveAds") == 1 && ResCheck.ResolutionType == ResType.tab)
         {
             content.DOAnchorPosY(600, 0);
         }
