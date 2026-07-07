@@ -23,12 +23,29 @@ public class AvatarPanel : MonoBehaviour
     public Sprite selectedboxFlag, notSelectedboxFlag;
     int selectedIndexFlag = 0;
     public Image Bar_Flag;
+    float scale=1.12f;
     private void OnEnable()
     {
        CheckData();
        CheckFlagData();
     }
+    private void Awake()
+    {
 
+        if (PlayerPrefs.GetInt("RemoveAds") == 1)
+        {
+            scale = 1.35f;
+            avatarPanel.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, 0, 0);
+            FlagPanel.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, 0, 0);
+            namePanel.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, 0, 0);
+
+        }
+        else
+        {
+            scale = 1.12f;
+        }
+
+    }
     void CheckData()
     {
         int selectedCh=PlayerPrefs.GetInt("selectedCh",0);
@@ -89,7 +106,7 @@ public class AvatarPanel : MonoBehaviour
         CheckData();
         bg.SetActive(true);
         avatarPanel.SetActive(true);
-        avatarPanel.GetComponent<RectTransform>().DOScale(1.35f,.35f).SetEase(Ease.OutBack);
+        avatarPanel.GetComponent<RectTransform>().DOScale(scale, .35f).SetEase(Ease.OutBack);
         avatarGroup.DOFade(1, .25f).SetEase(Ease.OutBack);
     }
     public void ShowFlagPanel()
@@ -97,7 +114,7 @@ public class AvatarPanel : MonoBehaviour
         CheckFlagData();
         //bg.SetActive(true);
         FlagPanel.SetActive(true);
-        FlagPanel.GetComponent<RectTransform>().DOScale(1.35f, .35f).SetEase(Ease.OutBack);
+        FlagPanel.GetComponent<RectTransform>().DOScale(scale, .35f).SetEase(Ease.OutBack);
         FlagGroup.DOFade(1, .25f).SetEase(Ease.OutBack);
 
 
@@ -167,8 +184,8 @@ public class AvatarPanel : MonoBehaviour
         if (selectedIndex != -1)
         {
             PlayerPrefs.SetInt("selectedCh", selectedIndex);
-            ABCManager.instance.ShowFireB();
-            //InitializeFirebase_CB.instance.LogFirebaseEvent(selectedIndex + "_Avatar_Selected");
+            //ABCManager.instance.ShowFireB();
+            InitializeFirebase_CB.instance.LogFirebaseEvent(selectedIndex + "_Avatar_Selected");
             foreach (var t in mainAvatar)
             {
                 t.SetActive(false);
@@ -185,11 +202,11 @@ public class AvatarPanel : MonoBehaviour
         if (selectedIndexFlag != -1)
         {
             PlayerPrefs.SetInt("selectedflg", selectedIndexFlag);
-            if (ABCManager.instance != null)
-            {
-                ABCManager.instance.ShowFireB();
-            }
-            //InitializeFirebase_CB.instance.LogFirebaseEvent(selectedIndexFlag + "_Country_Selected");
+            //if (ABCManager.instance != null)
+            //{
+            //    ABCManager.instance.ShowFireB();
+            //}
+            InitializeFirebase_CB.instance.LogFirebaseEvent(selectedIndexFlag + "_Country_Selected");
             foreach (var t in mainFlag)
             {
                 t.SetActive(false);

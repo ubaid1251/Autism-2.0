@@ -80,7 +80,7 @@ public class SelectShape : MonoBehaviour
     public void SelectNewShape(int num)
     {
         PlayerPrefs.SetInt("PLayDrawON", 0);
-      //      IntitializeAdmob.instance.ShowInterstitialAd();
+        IntitializeAdmob.instance.ShowInterstitial();
         DOTween.KillAll();
         GameController.ins.OffPens();
         SoundManager.instance.PlayEffect_Instance(4);

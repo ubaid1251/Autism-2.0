@@ -3,7 +3,7 @@ using UnityEngine;
 public class CheckColorScreen : MonoBehaviour
 {
     public GameObject UI_Obj, Bar,Board;
-
+    public Camera MyCam;
     private void Awake()
     {
 
@@ -15,6 +15,9 @@ public class CheckColorScreen : MonoBehaviour
 
             Bar.transform.GetComponent<RectTransform>().localScale = new Vector3(0.85f, 0.8f, 0.85f);
             Board.transform.GetComponent<RectTransform>().sizeDelta = new Vector2(1090.2f, 748.42f);
+            MyCam.GetComponent<Transform>().position = new Vector3(0, 0, -10);
+            MyCam.GetComponent<Camera>().orthographicSize = 4;
+
         }
     }
 

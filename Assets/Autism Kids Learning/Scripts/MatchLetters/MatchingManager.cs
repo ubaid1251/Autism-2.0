@@ -152,11 +152,12 @@ public class MatchingManager : MonoBehaviour
         PlayerPrefs.SetInt("Completed", 1);
         PlayerPrefs.SetInt("RateCounter", PlayerPrefs.GetInt("RateCounter") + 1);
         myS.PlayOneShot(click);
-        if (ABCManager.instance != null)
-        {
-            ABCManager.instance.ShowFireB();
-        }
-        //InitializeFirebase_CB.instance.LogFirebaseEvent(SceneManager.GetActiveScene().name+"_Switched_ByHome");
+        //if (ABCManager.instance != null)
+        //{
+        //    ABCManager.instance.ShowFireB();
+        //}
+        IntitializeAdmob.instance.ShowInterstitial();
+        InitializeFirebase_CB.instance.LogFirebaseEvent(SceneManager.GetActiveScene().name + "_Switched_ByHome");
         DOTween.KillAll(false);
 
         SceneManager.LoadScene("Selection");

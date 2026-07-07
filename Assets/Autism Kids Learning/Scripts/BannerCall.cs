@@ -5,7 +5,7 @@ public class BannerCall : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        IntitializeAdmob.instance.ShowBanner(); 
     }
 
     // Update is called once per frame

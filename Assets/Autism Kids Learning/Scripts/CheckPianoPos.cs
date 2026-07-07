@@ -3,7 +3,7 @@ using DG.Tweening;
 public class CheckPianoPos : MonoBehaviour
 {
     public RectTransform home;
-    public Transform AllChs, Rabit;
+    public Transform AllChs, Rabit,AllScene;
     void Awake()
     {
         if (PlayerPrefs.GetInt("RemoveAds") == 1)
@@ -12,6 +12,14 @@ public class CheckPianoPos : MonoBehaviour
             AllChs.localScale = new Vector3(1f, 1f, 1f);
             Rabit.localScale = new Vector3(0.32f, 0.32f, 0.32f);
             Rabit.localPosition = new Vector3(3.94f, 1, 0);
+            AllScene.position = new Vector3(0, 0, 0);
+        }
+        if (ResCheck.ResolutionType == ResType.tab)
+        {
+            if (PlaySoundAds.instance != null)
+            {
+                PlaySoundAds.instance.Off_Obj();
+            }
         }
     }
     

@@ -47,8 +47,8 @@ public class RhymeManager : MonoBehaviour
     {
         if (BackingTrack.GetComponent<AudioSource>().time >= BackingTrack.GetComponent<AudioSource>().clip.length && !completed)
         {
-            ABCManager.instance.ShowFireB();
-            //InitializeFirebase_CB.instance.LogFirebaseEvent("ABCTilesCompleted");
+            //ABCManager.instance.ShowFireB();
+            InitializeFirebase_CB.instance.LogFirebaseEvent("ABCTilesCompleted");
             completed = true;
             activeNext();
         }
@@ -56,11 +56,11 @@ public class RhymeManager : MonoBehaviour
     bool completed = false;
     void activeNext()
     {
-        if (ABCManager.instance != null)
-        {
-            ABCManager.instance.ShowFireB();
-        }
-        //InitializeFirebase_CB.instance.LogFirebaseEvent("ABCTilesReloaded");
+        //if (ABCManager.instance != null)
+        //{
+        //    ABCManager.instance.ShowFireB();
+        //}
+        InitializeFirebase_CB.instance.LogFirebaseEvent("ABCTilesReloaded");
         PlayerPrefs.SetString("ReloadScene", "TapTiles");
         // FinalPar.GetComponent<LoadingHandler>().loadNextScene = true;
         // FinalPar.GetComponent<LoadingHandler>().showBannerEnd = false;

@@ -106,11 +106,11 @@ public class MainSelection : MonoBehaviour
     {
         eventSystem.enabled = false;
         SubSelection.cameFrom = "MainSelection";
-        if (ABCManager.instance != null)
-        {
-            ABCManager.instance.ShowFireB();
-        }
-        //InitializeFirebase_CB.instance.LogFirebaseEvent(name + "_SelectedMode");
+        //if (ABCManager.instance != null)
+        //{
+        //    ABCManager.instance.ShowFireB();
+        //}
+        InitializeFirebase_CB.instance.LogFirebaseEvent(name + "_SelectedMode");
         DOTween.KillAll(false);
         if (SoundHandler.instance.mySource.enabled)
         {
@@ -147,11 +147,11 @@ public class MainSelection : MonoBehaviour
 
     public void LogEvent(string n)
     {
-        //InitializeFirebase_CB.instance.LogFirebaseEvent("User_Trying_to_Open_"+n);
-        if (ABCManager.instance != null)
-        {
-            ABCManager.instance.ShowFireB();
-        }
+        InitializeFirebase_CB.instance.LogFirebaseEvent("User_Trying_to_Open_" + n);
+        //if (ABCManager.instance != null)
+        //{
+        //    ABCManager.instance.ShowFireB();
+        //}
     }
     public void showAdult(GameObject p)
     {

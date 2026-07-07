@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "295260149552",
-    "project_id": "autism-learning-kids-games",
-    "storage_bucket": "autism-learning-kids-games.firebasestorage.app"
+    "project_number": "618954931906",
+    "project_id": "autism-learning-kids-games2",
+    "storage_bucket": "autism-learning-kids-games2.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:295260149552:android:d3426bcebf05cbdeecdaf5",
+        "mobilesdk_app_id": "1:618954931906:android:12e2bbc79ce2901e32055b",
         "android_client_info": {
           "package_name": "com.ls.autism.adhd.learn.kids.fun"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDbTAs20GaaJV-NM265pSrKU6Bz5SBozbU"
+          "current_key": "AIzaSyAyAJD2DtYjuLnQrJUg7MP81vnBpH4SFU8"
         }
       ],
       "services": {

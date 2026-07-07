@@ -9,9 +9,9 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Firebase.Analytics;
-#if !UNITY_EDITOR
-using Firebase.Crashlytics;
-#endif
+//#if !UNITY_EDITOR
+//using Firebase.Crashlytics;
+//#endif
 public class InitializeFirebase_CB : MonoBehaviour
 {
     [HideInInspector]
@@ -34,9 +34,9 @@ public class InitializeFirebase_CB : MonoBehaviour
             FirebaseApp.CheckAndFixDependenciesAsync().ContinueWith(task =>
             {
                 FirebaseAnalytics.SetAnalyticsCollectionEnabled(true);
-#if !UNITY_EDITOR
-                Crashlytics.ReportUncaughtExceptionsAsFatal = true;
-#endif
+//#if !UNITY_EDITOR
+//                Crashlytics.ReportUncaughtExceptionsAsFatal = true;
+//#endif
                 Debug.Log("Enabling firebase Analytics");
                 Dictionary<string, object> defaults = new Dictionary<string, object>();
                 // defaults.Add("RemoveAds", "0");

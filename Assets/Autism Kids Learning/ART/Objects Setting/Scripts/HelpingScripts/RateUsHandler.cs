@@ -14,8 +14,14 @@ public class RateUsHandler : MonoBehaviour
     void Start()
     {
         Instance = this;
-        DontDestroyOnLoad(this);
+        //DontDestroyOnLoad(this);
+
+        if (CheckRateCondition())
+        {
+            rate.SetActive(true);
+        }
     }
+
     public void Deactive()
     {
         //if (PlayerPrefs.GetInt("RemoveAds") == 0)
@@ -30,18 +36,14 @@ public class RateUsHandler : MonoBehaviour
         //IntitializeAdmob.instance.ShowBanner();//remove later
         PlayerPrefs.SetInt("RateDone", 1);
         rate.SetActive(false);
-     //   Device.RequestStoreReview();
+        Application.OpenURL("https://play.google.com/store/apps/details?id=com.ls.autism.adhd.learn.kids.fun");
     }
 
     public void cross()
     {
-        SoundManager.instance.PlayEffect_Instance(4);
+        //SoundManager.instance.PlayEffect_Instance(4);
         rate.GetComponent<Animator>().Play("PanelOut");
-        if (ABCManager.instance != null)
-        {
-            ABCManager.instance.ShowFireB();
-        }
-        //InitializeFirebase_CB.instance.LogFirebaseEvent("Rate_Game_CrossBtn_Pressed"); //lock
+        InitializeFirebase_CB.instance.LogFirebaseEvent("Rate_Game_CrossBtn_Pressed"); //lock
         Invoke(nameof(HidePanel), 0.9f);
     }
     void HidePanel()

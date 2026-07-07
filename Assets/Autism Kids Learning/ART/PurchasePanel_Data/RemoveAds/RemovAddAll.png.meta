@@ -1,0 +1,624 @@
+fileFormatVersion: 2
+guid: 6f602ec0260d275419806b635458cb66
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5512986477630522630
+    second: RemovAddAll_0
+  - first:
+      213: 2204756848137887823
+    second: RemovAddAll_1
+  - first:
+      213: 3044026241529061570
+    second: RemovAddAll_2
+  - first:
+      213: -678313674610098365
+    second: RemovAddAll_3
+  - first:
+      213: -5933364786764565788
+    second: RemovAddAll_4
+  - first:
+      213: -3513612843873546607
+    second: RemovAddAll_5
+  - first:
+      213: 3271264918862341562
+    second: RemovAddAll_6
+  - first:
+      213: -4083569856393032287
+    second: RemovAddAll_7
+  - first:
+      213: 3344955158590260984
+    second: RemovAddAll_8
+  - first:
+      213: 7826958818389598967
+    second: RemovAddAll_9
+  - first:
+      213: -9098930470475562159
+    second: RemovAddAll_10
+  - first:
+      213: -5538214040320073439
+    second: RemovAddAll_11
+  - first:
+      213: -6290849172490712148
+    second: RemovAddAll_12
+  - first:
+      213: 6219816258811969990
+    second: RemovAddAll_13
+  - first:
+      213: 4865046332292507812
+    second: RemovAddAll_14
+  - first:
+      213: -8502702409818384219
+    second: RemovAddAll_15
+  - first:
+      213: 4116849686518539481
+    second: RemovAddAll_16
+  - first:
+      213: 71905983491516503
+    second: RemovAddAll_17
+  - first:
+      213: -5734820523200398675
+    second: RemovAddAll_18
+  - first:
+      213: 6007350584773462110
+    second: RemovAddAll_19
+  - first:
+      213: -6943131395639813800
+    second: RemovAddAll_20
+  - first:
+      213: 3309796272667981060
+    second: RemovAddAll_21
+  - first:
+      213: -8821609336263858246
+    second: RemovAddAll_22
+  - first:
+      213: 7492283508179747631
+    second: RemovAddAll_23
+  - first:
+      213: -1283176245310157086
+    second: RemovAddAll_24
+  - first:
+      213: 2364974793759571452
+    second: RemovAddAll_25
+  - first:
+      213: 2125619279357060090
+    second: RemovAddAll_26
+  - first:
+      213: 3467656153215498140
+    second: RemovAddAll_27
+  - first:
+      213: -2821511498954201842
+    second: RemovAddAll_28
+  - first:
+      213: -5953885211058327578
+    second: RemovAddAll_29
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: RemovAddAll_0
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 924
+        width: 30
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60503ba0eff028c40800000000000000
+      internalID: 5512986477630522630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RemovAddAll_1
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 878
+        width: 882
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f406e5d0caed89e10800000000000000
+      internalID: 2204756848137887823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RemovAddAll_6
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 828
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab5acfe9c1ed56d20800000000000000
+      internalID: 3271264918862341562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RemovAddAll_13
+      rect:
+        serializedVersion: 2
+        x: 1078
+        y: 481
+        width: 402
+        height: 344
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c1cfa2fee9315650800000000000000
+      internalID: 6219816258811969990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RemovAddAll_15
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 840
+        width: 5
+        height: 3
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a8daef1535500a80800000000000000
+      internalID: -8502702409818384219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RemovAddAll_16
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 484
+        width: 441
+        height: 347
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d4ad965afcf12930800000000000000
+      internalID: 4116849686518539481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RemovAddAll_17
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 482
+        width: 474
+        height: 344
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 758ac3b6c167ff000800000000000000
+      internalID: 71905983491516503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RemovAddAll_19
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 273
+        width: 184
+        height: 193
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5848ae47856e5350800000000000000
+      internalID: 6007350584773462110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RemovAddAll_20
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 281
+        width: 160
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 859d60e28ca05af90800000000000000
+      internalID: -6943131395639813800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RemovAddAll_21
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 272
+        width: 206
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40579478c22ceed20800000000000000
+      internalID: 3309796272667981060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RemovAddAll_22
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 272
+        width: 206
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab729bc2c09539580800000000000000
+      internalID: -8821609336263858246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RemovAddAll_23
+      rect:
+        serializedVersion: 2
+        x: 1103
+        y: 268
+        width: 209
+        height: 202
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f234295a720f9f760800000000000000
+      internalID: 7492283508179747631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RemovAddAll_24
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 164
+        width: 394
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ee8112e00e313ee0800000000000000
+      internalID: -1283176245310157086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RemovAddAll_25
+      rect:
+        serializedVersion: 2
+        x: 1005
+        y: 205
+        width: 2
+        height: 1
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfdbac47b0412d020800000000000000
+      internalID: 2364974793759571452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RemovAddAll_27
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 45
+        width: 285
+        height: 202
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c977b9f16e69f1030800000000000000
+      internalID: 3467656153215498140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RemovAddAll_29
+      rect:
+        serializedVersion: 2
+        x: 1099
+        y: 31
+        width: 237
+        height: 171
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6efaa6112fc8f5da0800000000000000
+      internalID: -5953885211058327578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RemovAddAll_2
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 38
+        width: 485
+        height: 115
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a1038275ecb7bb4ea5fefbc1ce40c05
+      internalID: 3044026241529061570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: f91896717a95b304d89546745532e825
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      RemovAddAll_0: 5512986477630522630
+      RemovAddAll_1: 2204756848137887823
+      RemovAddAll_10: -9098930470475562159
+      RemovAddAll_11: -5538214040320073439
+      RemovAddAll_12: -6290849172490712148
+      RemovAddAll_13: 6219816258811969990
+      RemovAddAll_14: 4865046332292507812
+      RemovAddAll_15: -8502702409818384219
+      RemovAddAll_16: 4116849686518539481
+      RemovAddAll_17: 71905983491516503
+      RemovAddAll_18: -5734820523200398675
+      RemovAddAll_19: 6007350584773462110
+      RemovAddAll_2: 3044026241529061570
+      RemovAddAll_20: -6943131395639813800
+      RemovAddAll_21: 3309796272667981060
+      RemovAddAll_22: -8821609336263858246
+      RemovAddAll_23: 7492283508179747631
+      RemovAddAll_24: -1283176245310157086
+      RemovAddAll_25: 2364974793759571452
+      RemovAddAll_26: 2125619279357060090
+      RemovAddAll_27: 3467656153215498140
+      RemovAddAll_28: -2821511498954201842
+      RemovAddAll_29: -5953885211058327578
+      RemovAddAll_3: -678313674610098365
+      RemovAddAll_4: -5933364786764565788
+      RemovAddAll_5: -3513612843873546607
+      RemovAddAll_6: 3271264918862341562
+      RemovAddAll_7: -4083569856393032287
+      RemovAddAll_8: 3344955158590260984
+      RemovAddAll_9: 7826958818389598967
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

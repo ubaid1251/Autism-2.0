@@ -72,6 +72,10 @@ public class SubSelection : MonoBehaviour
             //    title[i].DOAnchorPosY(-130, 0);
             //}
         }
+        if(PlaySoundAds.instance != null)
+        {
+            PlaySoundAds.instance.Off_Obj();
+        }
         //BG.sprite = allbg[Random.Range(0, allbg.Length)];
         FindSelected();
     }
@@ -109,6 +113,7 @@ public class SubSelection : MonoBehaviour
 
     void LoadS()
     {
+        IntitializeAdmob.instance.ShowInterstitial();
         //if (RateUsHandler.Instance.rate.activeInHierarchy)
         //{
         //    RateUsHandler.Instance.Cross();
@@ -124,7 +129,7 @@ public class SubSelection : MonoBehaviour
     }
     void LoadH()
     {
-
+        IntitializeAdmob.instance.ShowInterstitial();
         //if (IntitializeAdmob.instance.IsStaticInterAvailable())
         //{
         //    LOADING.showBannerEnd = false;

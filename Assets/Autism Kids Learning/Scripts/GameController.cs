@@ -23,14 +23,13 @@ public class GameController : MonoBehaviour
     public List<GameObject> ColorsParts = new List<GameObject>();
     public Color[] MyColors;
     public GameObject BarText;
-  //  public List<Color> MyColors;
     public Sprite[] AllShapeSprites;
     public string[] AllShapeNames;
     public Vector3[] PenStartPosition;
     public static int ShapeTotalParts, ColorTotalParts, ShapeTotalRandPos,TotalCircles,ShapeActiveNo,ForLvl;
     public static int Countshape, CountSpriteColor,ChildColor, PartCountStart;
     public GameObject Tick, ColorsA, ColorsB, ColoringPen, DrawingPen, CanvasParent, GameOverPanel, ScratchImg
-        , NextBtn, SelectionPanel;//LoadingCanvas;
+        , NextBtn, SelectionPanel;
     public GameObject BarImage, TapToDraw;
     public GameObject ScratchCardObject;
     public ParticleSystem[] ParticleShapes;
@@ -50,12 +49,24 @@ public class GameController : MonoBehaviour
     void Start()
     {
         ins = this;
+        if (PlaySoundAds.instance != null)
+        {
+            PlaySoundAds.instance.Off_Obj();
+        }
         if (PlayerPrefs.GetInt("ShapeIsChosse")==1)
         {
+            if (PlaySoundAds.instance != null)
+            {
+                PlaySoundAds.instance.On_Obj();
+            }
             SelectionPanel.SetActive(false);
         }
         else if (PlayerPrefs.GetInt("ShapeIsChosse") == 0)
         {
+            if (PlaySoundAds.instance != null)
+            {
+                PlaySoundAds.instance.Off_Obj();
+            }
             SelectionPanel.SetActive(true);
         }
         PlayerPrefs.SetInt("Playpar", 0);
@@ -419,9 +430,19 @@ public class GameController : MonoBehaviour
         ConfetiPar.gameObject.SetActive(true);
         ConfetiPar.Play();
     }
-
-    void Update()
+   
+    public void OffRemove()
     {
-      //  print(Pen.transform.position);
+        if (PlaySoundAds.instance != null)
+        {
+            PlaySoundAds.instance.Off_Obj();
+        }
+    }
+    public void OnRemove()
+    {
+        if (PlaySoundAds.instance != null)
+        {
+            PlaySoundAds.instance.On_Obj();
+        }
     }
 }

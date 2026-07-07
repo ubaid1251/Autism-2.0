@@ -123,7 +123,7 @@ public class MoveAlongSpline : MonoBehaviour
         if (IsComplete == true)
         {
             OtherBodyParts.ins.OnRemainingParts();
-            transform.DOMove(new Vector3(-11f, -2.82f, 0f), 0.6f).SetEase(Ease.Linear)
+            transform.DOMove(new Vector3(-13f, -2.82f, 0f), 0.6f).SetEase(Ease.Linear)
                 .OnComplete(() =>
                 {
                     GameController.ins.CanvasParent.SetActive(true);

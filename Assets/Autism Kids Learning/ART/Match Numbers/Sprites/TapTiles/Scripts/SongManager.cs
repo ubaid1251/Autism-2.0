@@ -46,11 +46,11 @@ public class SongManager : MonoBehaviour
     {
         PlayerPrefs.SetInt("Completed", 1);
         PlayerPrefs.SetInt("RateCounter", PlayerPrefs.GetInt("RateCounter") + 1);
-        if (ABCManager.instance != null)
-        {
-            ABCManager.instance.ShowFireB();
-        }
-        //InitializeFirebase_CB.instance.LogFirebaseEvent("TileABC_Switched_ByHome");
+        //if (ABCManager.instance != null)
+        //{
+        //    ABCManager.instance.ShowFireB();
+        //}
+        InitializeFirebase_CB.instance.LogFirebaseEvent("TileABC_Switched_ByHome");
         DOTween.KillAll(false);
         // if (PlayerPrefs.GetInt("RemoveAds") == 0)
         // {
@@ -60,6 +60,7 @@ public class SongManager : MonoBehaviour
         //     loading.SetActive(true);
         // }
         // else
+        IntitializeAdmob.instance.ShowInterstitial();
         {
             // if (RateUsHandler.Instance.rate.activeInHierarchy)
             // {

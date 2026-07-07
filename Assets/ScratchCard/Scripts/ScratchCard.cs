@@ -371,7 +371,7 @@ public class ScratchCard : MonoBehaviour
                 //  ScratchCardManager.SpriteCard.GetComponent<SpriteRenderer>().enabled = false;
                 GameController.ins.Tick.SetActive(true);
                 GameController.ins.ColoringPen.GetComponent<DragDropSprite>().enabled = false;
-                GameController.ins.ColoringPen.transform.DOLocalMove(new Vector3(10.1f, -2.29f, 0), 0.5f).SetEase(Ease.Linear);
+                GameController.ins.ColoringPen.transform.DOLocalMove(new Vector3(14f, -3.6f, 0), 0.5f).SetEase(Ease.Linear);
                 DragDropSprite.ins.isSound = false;
                 GameController.ins.PlayParticleForColorParts();
                 DragDropSprite.ins.finger.SetActive(false);

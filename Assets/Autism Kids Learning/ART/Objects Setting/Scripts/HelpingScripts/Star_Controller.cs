@@ -29,7 +29,7 @@ public class Star_Controller : MonoBehaviour
 
     public void RateStar(int selectedStar)
     {
-        SoundManager.instance.PlayEffect_Instance(7);
+        //SoundManager.instance.PlayEffect_Instance(7);
         StartCoroutine(StarActive(selectedStar));
     }
     public IEnumerator PlayMyAudio()

@@ -27,6 +27,25 @@ public class homCall : MonoBehaviour
         PlayerPrefs.SetInt("Completed", 1);
         PlayerPrefs.SetInt("RateCounter", PlayerPrefs.GetInt("RateCounter") + 1);
         PlayerPrefs.SetInt("FirstAnim", 0);
+        IntitializeAdmob.instance.ShowInterstitial();
         SceneManager.LoadScene("Selection");
+    }
+    public void ColorsHome()
+    {
+        SoundManager.instance.PlayEffect_Instance(4);
+        GameController.ins.OffPens();
+        DOTween.KillAll();
+        PlayerPrefs.SetInt("Completed", 1);
+        PlayerPrefs.SetInt("RateCounter", PlayerPrefs.GetInt("RateCounter") + 1);
+        PlayerPrefs.SetInt("FirstAnim", 0);
+        SceneManager.LoadScene("Selection");
+        IntitializeAdmob.instance.ShowInterstitial();
+        //DOTween.KillAll();
+
+        //Invoke("wait1", 0.3f);
+    }
+    private void wait1()
+    {
+
     }
 }

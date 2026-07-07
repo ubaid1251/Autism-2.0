@@ -36,16 +36,19 @@ public class ABCManager : MonoBehaviour
 
     void Start()
     {
-        //if (PlayerPrefs.GetInt("RemoveAds") == 0)
-        //{
-        //    IntitializeAdmob.instance.ShowBanner(); //remove later
-        //}
-        //else
+        if (PlaySoundAds.instance != null)
+        {
+            PlaySoundAds.instance.On_Obj();
+        }
+        if (PlayerPrefs.GetInt("RemoveAds") == 0)
+        {
+            IntitializeAdmob.instance.ShowBanner(); //remove later
+        }
+        else
         {
             home.DOAnchorPosY(-130, 0);
             banner.gameObject.SetActive(false);
         }
-
         PlayerPrefs.SetString("PrevSelectedAlph", PlayerPrefs.GetString("SelectedAlphabet"));
         instance = this;
         tapS = GetComponent<AudioSource>();
@@ -200,10 +203,10 @@ public class ABCManager : MonoBehaviour
         PlayerPrefs.SetInt("Completed", 1);
         PlayerPrefs.SetInt("RateCounter", PlayerPrefs.GetInt("RateCounter") + 1);
         eventSystem.enabled = false;
-        ShowFireB();
-        //InitializeFirebase_CB.instance.LogFirebaseEvent(SceneManager.GetActiveScene().name + "_Switched_ByHome");
+        //ShowFireB();
+        InitializeFirebase_CB.instance.LogFirebaseEvent(SceneManager.GetActiveScene().name + "_Switched_ByHome");
         DOTween.KillAll(false);
-
+        IntitializeAdmob.instance.ShowInterstitial();
         SceneManager.LoadScene("TraceSelection");
     }
 
@@ -211,8 +214,8 @@ public class ABCManager : MonoBehaviour
     {
         Destroy(g, 1);
     }
-    public void ShowFireB()
-    {
-      //print()
-    }
+    //public void ShowFireB()
+    //{
+    //  //print()
+    //}
 }

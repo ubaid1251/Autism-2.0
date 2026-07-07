@@ -32,6 +32,10 @@ public class SelectionMenu : MonoBehaviour
     }
     void Start()
     {
+        if (PlaySoundAds.instance != null)
+        {
+            PlaySoundAds.instance.On_Obj();
+        }
         PlayerPrefs.SetInt("FirstAnim", 0);
         PlayerPrefs.SetInt("FirstPuzzle", 0);
         PlayerPrefs.SetInt("countAnimal", 0);
@@ -58,21 +62,22 @@ public class SelectionMenu : MonoBehaviour
     // Update is called once per frame
     public void GotoScene(string num)
     {
-        if (ABCManager.instance != null)
-        {
-            ABCManager.instance.ShowFireB();
-        }
-        //InitializeFirebase_CB.instance.LogFirebaseEvent(num+"_SceneLoaded");
+        //if (ABCManager.instance != null)
+        //{
+        //    ABCManager.instance.ShowFireB();
+        //}
+        InitializeFirebase_CB.instance.LogFirebaseEvent(num + "_SceneLoaded");
         SoundManager.instance.PlayEffect_Instance(5);
+        IntitializeAdmob.instance.ShowInterstitial();
         SceneManager.LoadScene(num);
     }
     public void SetColor(int Colrnum)
     {
-        //InitializeFirebase_CB.instance.LogFirebaseEvent(Colrnum + "_BackgroundColor");
-        if (ABCManager.instance != null)
-        {
-            ABCManager.instance.ShowFireB();
-        }
+        InitializeFirebase_CB.instance.LogFirebaseEvent(Colrnum + "_BackgroundColor");
+        //if (ABCManager.instance != null)
+        //{
+        //    ABCManager.instance.ShowFireB();
+        //}
         SoundManager.instance.PlayEffect_Instance(4);
         pnel.SetActive(false);
         for (int i = 0; i < Colors.Length; i++)

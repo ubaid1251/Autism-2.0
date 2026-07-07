@@ -79,11 +79,11 @@ public class LetterHandler : MonoBehaviour
         //if (PlayerPrefs.GetInt("TimePlayed") >=3)
         //{
         //    //ABCManager.firebaseCounter = 0;
-        if (ABCManager.instance != null)
-        {
-            ABCManager.instance.ShowFireB();
-        }
-        //InitializeFirebase_CB.instance.LogFirebaseEvent("Letter_" + PlayerPrefs.GetString("SelectedAlphabet") + "_Completed");//remove later
+        //if (ABCManager.instance != null)
+        //{
+        //    ABCManager.instance.ShowFireB();
+        //}
+        InitializeFirebase_CB.instance.LogFirebaseEvent("Letter_" + PlayerPrefs.GetString("SelectedAlphabet") + "_Completed");//remove later
         //    Debug.Log("Letter_" + PlayerPrefs.GetString("SelectedAlphabet") + "_Completed");
 
         PlayerPrefs.SetString("SelectedAlphabet", nextL);

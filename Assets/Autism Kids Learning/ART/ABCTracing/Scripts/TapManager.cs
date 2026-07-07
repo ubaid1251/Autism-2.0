@@ -48,11 +48,11 @@ public class TapManager : MonoBehaviour, IPointerDownHandler
         //Vibration.Vibrate(50);
         PlayerPrefs.SetInt("Completed", 1);
         PlayerPrefs.SetInt("RateCounter", PlayerPrefs.GetInt("RateCounter") + 1);
-        if (ABCManager.instance != null)
-        {
-            ABCManager.instance.ShowFireB();
-        }
-        //  InitializeFirebase_CB.instance.LogFirebaseEvent(SceneManager.GetActiveScene().name + "_Switched_ByHome");
+        //if (ABCManager.instance != null)
+        //{
+        //    ABCManager.instance.ShowFireB();
+        //}
+        InitializeFirebase_CB.instance.LogFirebaseEvent(SceneManager.GetActiveScene().name + "_Switched_ByHome");
 
         DOTween.KillAll(false);
         //if (IntitializeAdmob.instance.IsStaticInterAvailable())
