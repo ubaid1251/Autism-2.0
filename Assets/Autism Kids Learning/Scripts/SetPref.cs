@@ -11,6 +11,8 @@ public class SetPref : MonoBehaviour
         PlayerPrefs.SetInt("PLayDrawON", 0);
         PlayerPrefs.SetInt("Purchased", 1);
         PlayerPrefs.SetInt("RateCounter",0);
+        PlayerPrefs.SetInt("Completed", 0);
+
     }
 
     // Update is called once per frame

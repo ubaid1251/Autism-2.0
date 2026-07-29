@@ -196,7 +196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc93ee9fe40c3654ea03ae69c0bf401a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  showLog: 0
+  showLog: 1
   AdmobTestIds: 0
   admobAppID: ca-app-pub-4103477709439075~8587024885
   BannerData:

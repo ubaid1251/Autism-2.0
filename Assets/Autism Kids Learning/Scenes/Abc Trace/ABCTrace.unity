@@ -1442,7 +1442,6 @@ MonoBehaviour:
   LoadingAd: {fileID: 1129461179}
   home: {fileID: 313358962}
   banner: {fileID: 1402532620}
-  t1: {fileID: 1758154532}
 --- !u!82 &556714619
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2282,14 +2281,14 @@ RectTransform:
   m_GameObject: {fileID: 867405491}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.92929, y: 0.92929, z: 0.92929}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 407902945}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 287.30005, y: -238.59998}
+  m_AnchoredPosition: {x: 288.2, y: -269}
   m_SizeDelta: {x: 157, y: 229}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &867405493
@@ -3188,7 +3187,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -130, y: 110}
+  m_AnchoredPosition: {x: -130, y: 285}
   m_SizeDelta: {x: 196, y: 198}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1508609408
@@ -3482,7 +3481,7 @@ MonoBehaviour:
   autoPlay: 1
   useTargetAsV3: 0
   endValueFloat: 0
-  endValueV3: {x: -110, y: 110, z: 0}
+  endValueV3: {x: -110, y: 285, z: 0}
   endValueV2: {x: 0, y: 0}
   endValueColor: {r: 1, g: 1, b: 1, a: 1}
   endValueString: 
@@ -5046,7 +5045,7 @@ PrefabInstance:
     - target: {fileID: 6809575777284148337, guid: e9c6a9d2a40b0477689a7baddd180602, type: 3}
       propertyPath: m_Material
       value: 
-      objectReference: {fileID: 2100000, guid: 9dc7e810a87b444ab96919f3215c2fe5, type: 2}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

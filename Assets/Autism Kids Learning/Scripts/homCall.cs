@@ -7,7 +7,7 @@ public class homCall : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
-    {   
+    {
 
     }
     public void preshomePuzle()
@@ -32,6 +32,7 @@ public class homCall : MonoBehaviour
     }
     public void ColorsHome()
     {
+        SoundManager.instance.StopAllSounds();
         SoundManager.instance.PlayEffect_Instance(4);
         GameController.ins.OffPens();
         DOTween.KillAll();

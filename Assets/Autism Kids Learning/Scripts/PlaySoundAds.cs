@@ -7,8 +7,10 @@ public class PlaySoundAds : MonoBehaviour
     public GameObject Obj;
     public GameObject PopUp;
     CanvasGroup cg;
+    bool IsPopup=false;
     private void Awake()
     {
+        SceneManager.sceneLoaded += OnSceneLoaded;
 
     }
     private void OnEnable()
@@ -17,7 +19,6 @@ public class PlaySoundAds : MonoBehaviour
     }
     void Start()
     {
-
         if (PlayerPrefs.GetInt("RemoveAds") == 1)
         {
             Destroy(gameObject);
@@ -33,6 +34,19 @@ public class PlaySoundAds : MonoBehaviour
         }
         DontDestroyOnLoad(gameObject);
 
+    }
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if(IsPopup)
+        {
+            IsPopup=false;
+            IntitializeAdmob.instance.ShowBanner();
+            PopUp.transform.DOScale(0.5f, .25f);
+            cg.DOFade(0, .25f).OnComplete(() =>
+           {
+                PopUp.transform.parent.parent.gameObject.SetActive(false);
+           });
+        }
     }
     public void PlauSound()
     {
@@ -60,6 +74,7 @@ public class PlaySoundAds : MonoBehaviour
     public void OpenPopUp()
     {
         SoundManager.instance.PlayEffect_Instance(4);
+        IsPopup=true;
         IntitializeAdmob.instance.HideBanner();
         PopUp.transform.parent.parent.gameObject.SetActive(true);
         PopUp.transform.DOScale(1, .25f);
@@ -68,7 +83,8 @@ public class PlaySoundAds : MonoBehaviour
     public void ClosePopUp()
     {
         SoundManager.instance.PlayEffect_Instance(4);
-        IntitializeAdmob.instance.ShowBanner();    
+        IntitializeAdmob.instance.ShowBanner();
+        IsPopup=false;
         PopUp.transform.DOScale(0.5f, .25f);
         cg.DOFade(0, .25f).OnComplete(() =>
         {
