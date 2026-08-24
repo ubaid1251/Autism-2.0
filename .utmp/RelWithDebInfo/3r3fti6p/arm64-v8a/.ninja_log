@@ -1,5 +1,5 @@
 # ninja log v5
-1512	2203	1785080618573335624	/Users/sameen/Documents/GitHub/Autism-2.0/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/3r3fti6p/obj/arm64-v8a/libswappywrapper.so	cd3d5b6cb15bdab6
-7	1511	1785080617875197659	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	4ff8cd7915b2916b
-1	1058	1785173103933657367	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	4ff8cd7915b2916b
-1058	4399	1785173107279969006	/Users/sameen/Documents/GitHub/Autism-2.0/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/3r3fti6p/obj/arm64-v8a/libswappywrapper.so	cd3d5b6cb15bdab6
+6	954	1786131079639987121	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	4ff8cd7915b2916b
+954	3277	1786131081961673756	/Users/sameen/Documents/GitHub/Autism-2.0/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/3r3fti6p/obj/arm64-v8a/libswappywrapper.so	cd3d5b6cb15bdab6
+1	7058	1786486240888240437	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	4ff8cd7915b2916b
+7060	11618	1786486245445380853	/Users/sameen/Documents/GitHub/Autism-2.0/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/3r3fti6p/obj/arm64-v8a/libswappywrapper.so	cd3d5b6cb15bdab6

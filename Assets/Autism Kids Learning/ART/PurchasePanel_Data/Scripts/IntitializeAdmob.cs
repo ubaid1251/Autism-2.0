@@ -4,12 +4,14 @@ using System.Collections.Generic;
 using GoogleMobileAds.Common;
 using GoogleMobileAds.Ump.Api;
 using UnityEngine;
+using UnityEngine.Serialization;
 
-[System.Serializable]
+[Serializable]
 public class BannerAdData
 {
     [Header("Banner Ad ID")] public string bannerAdUnitIds, secondBannerAdUnitIds;
-    [Header("Banner Ad Position")] public AdPosition BadsPosition, secondBadsPosition;
+    [FormerlySerializedAs("BadsPosition")] [Header("Banner Ad Position")] public AdPosition badsPosition;
+    [Header("Banner Ad Position")] public AdPosition secondBadsPosition;
 
     [Header("Banner Ad Type")]
     public BannerType bannerType = BannerType.Simple_Banner, secondBannerType = BannerType.Simple_Banner;
@@ -17,7 +19,7 @@ public class BannerAdData
     [HideInInspector] public BannerView bannerView, secondBannerView;
 }
 
-[System.Serializable]
+[Serializable]
 public class InterstialAdData
 {
     [Header("Interstitial Ad ID")] public string admobInterstialID;
@@ -65,16 +67,6 @@ public class IntitializeAdmob : MonoBehaviour
         IsPlay_Count = true;
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
         Debug.unityLogger.logEnabled = showLog;
-        // try
-        // {
-        // {
-        //     CallAds();
-        // }
-        // catch (Exception ex)
-        // {
-        //     Debug.Log(ex.Message);
-        //     Debug.Log("Ads package not Initialise");
-        // }
     }
 
     public void RequestConsent()
@@ -129,7 +121,7 @@ public class IntitializeAdmob : MonoBehaviour
 
         if (twoBanners)
         {
-            BannerData.BadsPosition = AdPosition.TopLeft;
+            BannerData.badsPosition = AdPosition.TopLeft;
             BannerData.bannerType = BannerType.Simple_Banner;
         }
 
@@ -150,7 +142,7 @@ public class IntitializeAdmob : MonoBehaviour
         {
             if (PlayerPrefs.GetInt("RemoveAds") == 0)
             {
-               // if (InitializeFirebase_CB.instance.removeInter)
+                if (InitializeFirebase_CB.instance.removeInter)
                 {
                     RequestAdmobInterstitial();
                     RequestStaticAdmobInterstitial();
@@ -324,12 +316,11 @@ public class IntitializeAdmob : MonoBehaviour
     public void ShowInterstitial()
     {
         // ✅ Safe check
-      //  if (InitializeFirebase_CB.instance != null &&
-        //    InitializeFirebase_CB.instance.removeInter)
-          //  return;
+        if (InitializeFirebase_CB.instance != null &&
+            InitializeFirebase_CB.instance.removeInter)
+            return;
 
         // ✅ Try primary ad
-        if(IsInterAvailable()==false)return;
         if (interstitialAd != null && interstitialAd.CanShowAd())
         {
             Debug.Log("<color=green>Showing ad 1</color>");
@@ -357,7 +348,6 @@ public class IntitializeAdmob : MonoBehaviour
 
     public void ShowStaticInterstitial()
     {
-        if(IsInterAvailable()==false)return;
         if (interstitialStaticAd != null)
         {
             if (interstitialStaticAd.CanShowAd())
@@ -544,17 +534,17 @@ public class IntitializeAdmob : MonoBehaviour
 
         if (BannerData.bannerType == BannerType.Simple_Banner)
         {
-            BannerData.bannerView = new BannerView(BannerData.bannerAdUnitIds, AdSize.Banner, BannerData.BadsPosition);
+            BannerData.bannerView = new BannerView(BannerData.bannerAdUnitIds, AdSize.Banner, BannerData.badsPosition);
         }
         else if (BannerData.bannerType == BannerType.Adaptive_Banner)
         {
             AdSize adaptiveSize = AdSize.GetCurrentOrientationAnchoredAdaptiveBannerAdSizeWithWidth(AdSize.FullWidth);
-            BannerData.bannerView = new BannerView(BannerData.bannerAdUnitIds, adaptiveSize, BannerData.BadsPosition);
+            BannerData.bannerView = new BannerView(BannerData.bannerAdUnitIds, adaptiveSize, BannerData.badsPosition);
         }
         else
         {
             BannerData.bannerView =
-                new BannerView(BannerData.bannerAdUnitIds, AdSize.SmartBanner, BannerData.BadsPosition);
+                new BannerView(BannerData.bannerAdUnitIds, AdSize.SmartBanner, BannerData.badsPosition);
         }
 
         // Create an ad request with the highest priority
@@ -619,7 +609,7 @@ public class IntitializeAdmob : MonoBehaviour
         {
             if (BannerData.bannerView != null) // && !BannerExsist())
             {
-                Debug.Log("Showing banner view.");
+                print("Showing banner view.");
                 BannerData.bannerView.Show();
             }
             else
@@ -631,7 +621,7 @@ public class IntitializeAdmob : MonoBehaviour
             {
                 if (BannerData.secondBannerView != null) // && !BannerExsist())
                 {
-                    Debug.Log("Showing second banner view.");
+                    print("Showing second banner view.");
                     BannerData.secondBannerView.Show();
                 }
                 else
@@ -667,7 +657,6 @@ public class IntitializeAdmob : MonoBehaviour
     {
         if (BannerData.bannerView != null)
         {
-            Debug.Log("Destroying banner view.");
             BannerData.bannerView.Destroy();
             BannerData.bannerView = null;
         }
@@ -782,11 +771,10 @@ public class IntitializeAdmob : MonoBehaviour
         };
     }
 
-    public void DestroySecondBannerView()
+    private void DestroySecondBannerView()
     {
         if (BannerData.secondBannerView != null)
         {
-            Debug.Log("Destroying banner view.");
             BannerData.secondBannerView.Destroy();
             BannerData.secondBannerView = null;
         }
