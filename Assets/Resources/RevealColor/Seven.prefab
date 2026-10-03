@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7303926831538001433}
-  - component: {fileID: 1778309728002308806}
+  - component: {fileID: 8657901887648066521}
   m_Layer: 0
   m_Name: ScratchCardManager
   m_TagString: Untagged
@@ -34,7 +34,7 @@ Transform:
   - {fileID: 3593759908110531395}
   m_Father: {fileID: 7926538982709551092}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1778309728002308806
+--- !u!114 &8657901887648066521
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -43,7 +43,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 346772413763574590}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1091e69478f334e5c995b30d9b122da3, type: 3}
+  m_Script: {fileID: 11500000, guid: 8e69f6c0e3da4b040ab2f2cefa9d80ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   MainCamera: {fileID: 0}
@@ -54,9 +54,9 @@ MonoBehaviour:
   EraseTexture: {fileID: 2800000, guid: eef5a9056291fba45ad50d97817d14ae, type: 3}
   EraseTextureScale: {x: 0.7, y: 0.7}
   InputEnabled: 1
-  Card: {fileID: 7899308338128925068}
+  Card: {fileID: 1585835009309533963}
   Mode: 1
-  Progress: {fileID: 1573851509113442071}
+  Progress: {fileID: 1969361765542102042}
   MeshCard: {fileID: 0}
   SpriteCard: {fileID: 8304162058659326047}
   ImageCard: {fileID: 0}
@@ -114,6 +114,9 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -308,6 +311,9 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -359,7 +365,7 @@ MonoBehaviour:
   - {x: 2.42, y: 2.37, z: 0}
   - {x: -1.85, y: -0.1, z: 0}
   - {x: 2.94, y: 0.47, z: 0}
-  progreess: {fileID: 1573851509113442071}
+  progreess: {fileID: 1969361765542102042}
 --- !u!1 &886641902653066119
 GameObject:
   m_ObjectHideFlags: 0
@@ -410,6 +416,9 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -562,8 +571,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2454424547268162642}
-  - component: {fileID: 7899308338128925068}
-  - component: {fileID: 1573851509113442071}
+  - component: {fileID: 1585835009309533963}
+  - component: {fileID: 1969361765542102042}
   m_Layer: 0
   m_Name: Scratch Card
   m_TagString: Untagged
@@ -586,7 +595,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7303926831538001433}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7899308338128925068
+--- !u!114 &1585835009309533963
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -595,7 +604,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1547945296956100643}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 444b8500698854b63ac5ae06ea55cb6e, type: 3}
+  m_Script: {fileID: 11500000, guid: 45638a7b43d7d8c4f8e38a6e14e6a096, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   MainCamera: {fileID: 0}
@@ -614,8 +623,8 @@ MonoBehaviour:
   - {fileID: 3350203826544507574}
   dummy: {fileID: 1592010768506502757}
   _mode: 1
-  EraseProgress: {fileID: 1573851509113442071}
---- !u!114 &1573851509113442071
+  EraseProgress: {fileID: 1969361765542102042}
+--- !u!114 &1969361765542102042
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -624,10 +633,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1547945296956100643}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 094d449eda6fe41dfa30fa9424593a15, type: 3}
+  m_Script: {fileID: 11500000, guid: bb177a93030339c4ca6e1f890b37e2ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Card: {fileID: 7899308338128925068}
+  Card: {fileID: 1585835009309533963}
   isCompleted: 0
   SoundObject: {fileID: 0}
   eraseDone: 0
@@ -715,6 +724,9 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -908,6 +920,9 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1101,6 +1116,9 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1187,7 +1205,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: a2c192ee7a1884c9fbe32fffca92c21a, type: 3}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: a2c192ee7a1884c9fbe32fffca92c21a, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1295,7 +1314,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 81af7d4328ed84a69a872c952e7114ea, type: 3}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: 81af7d4328ed84a69a872c952e7114ea, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1431,6 +1451,9 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1630,6 +1653,8 @@ MonoBehaviour:
   bgmOff: {fileID: 0}
   vibOn: {fileID: 0}
   VibOff: {fileID: 0}
+  setng: {fileID: 0}
+  setng2: {fileID: 0}
   selectCh: {fileID: 0}
   click: {fileID: 0}
   tap: {fileID: 0}
@@ -1685,6 +1710,9 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1877,6 +1905,9 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1962,6 +1993,9 @@ TrailRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2107,6 +2141,9 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:

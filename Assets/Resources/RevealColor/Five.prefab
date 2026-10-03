@@ -437,6 +437,7 @@ MonoBehaviour:
   isFrom: 0
   isIndependentUpdate: 0
   autoKill: 1
+  autoGenerate: 1
   isActive: 1
   isValid: 1
   target: {fileID: 3000700820627046663}
@@ -458,10 +459,12 @@ MonoBehaviour:
     height: 0
   endValueTransform: {fileID: 0}
   optionalBool0: 0
+  optionalBool1: 0
   optionalFloat0: 0
   optionalInt0: 0
   optionalRotationMode: 0
   optionalScrambleMode: 0
+  optionalShakeRandomnessMode: 0
   optionalString: 
 --- !u!1 &5342353594669428169
 GameObject:
@@ -559,7 +562,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7822746105753148273}
-  - component: {fileID: 7528290082370577052}
+  - component: {fileID: 4835869591744725126}
+  - component: {fileID: 6753803986587459471}
   m_Layer: 0
   m_Name: Scratch Card
   m_TagString: Untagged
@@ -582,7 +586,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5646251039477458651}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7528290082370577052
+--- !u!114 &4835869591744725126
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -591,10 +595,39 @@ MonoBehaviour:
   m_GameObject: {fileID: 5740667529143539875}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 094d449eda6fe41dfa30fa9424593a15, type: 3}
+  m_Script: {fileID: 11500000, guid: 45638a7b43d7d8c4f8e38a6e14e6a096, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Card: {fileID: 0}
+  MainCamera: {fileID: 0}
+  Surface: {fileID: 0}
+  RenderTextureQuality: 1
+  Eraser: {fileID: 0}
+  Progress: {fileID: 0}
+  ScratchSurface: {fileID: 0}
+  RenderTexture: {fileID: 0}
+  BrushScale: {x: 0.7, y: 0.7}
+  InputEnabled: 1
+  anim: []
+  other:
+  - {fileID: 8579906577765485085}
+  otherToOff:
+  - {fileID: 1122115375923376915}
+  dummy: {fileID: 873965274477210229}
+  _mode: 1
+  EraseProgress: {fileID: 6753803986587459471}
+--- !u!114 &6753803986587459471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5740667529143539875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb177a93030339c4ca6e1f890b37e2ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Card: {fileID: 4835869591744725126}
   isCompleted: 0
   SoundObject: {fileID: 0}
   eraseDone: 0
@@ -765,6 +798,7 @@ MonoBehaviour:
   isFrom: 0
   isIndependentUpdate: 0
   autoKill: 1
+  autoGenerate: 1
   isActive: 1
   isValid: 1
   target: {fileID: 8957134177582048411}
@@ -786,10 +820,12 @@ MonoBehaviour:
     height: 0
   endValueTransform: {fileID: 0}
   optionalBool0: 0
+  optionalBool1: 0
   optionalFloat0: 0
   optionalInt0: 0
   optionalRotationMode: 0
   optionalScrambleMode: 0
+  optionalShakeRandomnessMode: 0
   optionalString: 
 --- !u!1 &6226618867928984696
 GameObject:
@@ -958,6 +994,7 @@ MonoBehaviour:
   isFrom: 0
   isIndependentUpdate: 0
   autoKill: 1
+  autoGenerate: 1
   isActive: 1
   isValid: 1
   target: {fileID: 6698051357078016227}
@@ -979,10 +1016,12 @@ MonoBehaviour:
     height: 0
   endValueTransform: {fileID: 0}
   optionalBool0: 0
+  optionalBool1: 0
   optionalFloat0: 0
   optionalInt0: 0
   optionalRotationMode: 0
   optionalScrambleMode: 0
+  optionalShakeRandomnessMode: 0
   optionalString: 
 --- !u!1 &6756207180246270538
 GameObject:
@@ -1151,6 +1190,7 @@ MonoBehaviour:
   isFrom: 0
   isIndependentUpdate: 0
   autoKill: 1
+  autoGenerate: 1
   isActive: 1
   isValid: 1
   target: {fileID: 5653811111517733446}
@@ -1172,10 +1212,12 @@ MonoBehaviour:
     height: 0
   endValueTransform: {fileID: 0}
   optionalBool0: 0
+  optionalBool1: 0
   optionalFloat0: 0
   optionalInt0: 0
   optionalRotationMode: 0
   optionalScrambleMode: 0
+  optionalShakeRandomnessMode: 0
   optionalString: 
 --- !u!1 &7044096668440364968
 GameObject:
@@ -1186,6 +1228,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5646251039477458651}
+  - component: {fileID: 2967275609308311832}
   m_Layer: 0
   m_Name: ScratchCardManager
   m_TagString: Untagged
@@ -1210,6 +1253,36 @@ Transform:
   - {fileID: 3804866802189914549}
   m_Father: {fileID: 5708779801197050041}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2967275609308311832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7044096668440364968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e69f6c0e3da4b040ab2f2cefa9d80ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MainCamera: {fileID: 0}
+  RenderType: 1
+  ScratchSurfaceSprite: {fileID: 21300000, guid: ef8bc254a9e374bed97dc4cd4d67cfa6, type: 3}
+  ScratchSurfaceSpriteHasAlpha: 1
+  MaskProgressCutOffValue: 0.33
+  EraseTexture: {fileID: 2800000, guid: eef5a9056291fba45ad50d97817d14ae, type: 3}
+  EraseTextureScale: {x: 0.7, y: 0.7}
+  InputEnabled: 1
+  Card: {fileID: 4835869591744725126}
+  Mode: 1
+  Progress: {fileID: 6753803986587459471}
+  MeshCard: {fileID: 0}
+  SpriteCard: {fileID: 5342353594669428169}
+  ImageCard: {fileID: 0}
+  MaskShader: {fileID: 4800000, guid: 091cc9a445340c04bbcfbc65c0bef43f, type: 3}
+  BrushShader: {fileID: 4800000, guid: efcd8dda2a6b7f9429d89ff2b5d7ebbe, type: 3}
+  MaskProgressShader: {fileID: 4800000, guid: 416d7cfe5d2da4988959de9a6c288abc, type: 3}
+  MaskProgressCutOffShader: {fileID: 4800000, guid: 77521b41b2fb846cdb39d5d9d0b5ad12, type: 3}
 --- !u!1 &7426198139952102385
 GameObject:
   m_ObjectHideFlags: 0
@@ -1315,7 +1388,7 @@ MonoBehaviour:
   - {x: 2.6, y: 1.53, z: 0}
   - {x: -2.05, y: 0.22, z: 0}
   - {x: 1.61, y: -0.57, z: 0}
-  progreess: {fileID: 7528290082370577052}
+  progreess: {fileID: 6753803986587459471}
 --- !u!1 &7771911024903729247
 GameObject:
   m_ObjectHideFlags: 0
@@ -1483,6 +1556,7 @@ MonoBehaviour:
   isFrom: 0
   isIndependentUpdate: 0
   autoKill: 1
+  autoGenerate: 1
   isActive: 1
   isValid: 1
   target: {fileID: 1293279612062758530}
@@ -1504,10 +1578,12 @@ MonoBehaviour:
     height: 0
   endValueTransform: {fileID: 0}
   optionalBool0: 0
+  optionalBool1: 0
   optionalFloat0: 0
   optionalInt0: 0
   optionalRotationMode: 0
   optionalScrambleMode: 0
+  optionalShakeRandomnessMode: 0
   optionalString: 
 --- !u!1 &7860308417948803626
 GameObject:
@@ -1565,6 +1641,8 @@ MonoBehaviour:
   bgmOff: {fileID: 0}
   vibOn: {fileID: 0}
   VibOff: {fileID: 0}
+  setng: {fileID: 0}
+  setng2: {fileID: 0}
   selectCh: {fileID: 0}
   click: {fileID: 0}
   tap: {fileID: 0}

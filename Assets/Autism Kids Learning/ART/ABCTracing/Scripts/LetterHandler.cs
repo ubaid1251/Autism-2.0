@@ -61,45 +61,37 @@ public class LetterHandler : MonoBehaviour
             ////print(PlayerPrefs.GetInt("BuyTrace") + " = This is byu trace");
             nextL = "A";
         }
-        //else
-        //{
-        //    //print("HelooElseTrace");
-        //}
         if (PlayerPrefs.GetInt("Purchased") == 0 )
         {
            PlayerPrefs.SetInt("BuyTrace", PlayerPrefs.GetInt("BuyTrace") + 1);
         }
 
+     //   InitializeFirebase_CB.instance.LogFirebaseEvent("Letter_" + PlayerPrefs.GetString("SelectedAlphabet") + "_Completed");//remove later
 
-        //else
-        //{
-        //    SceneManager.LoadScene("ColorGame");
-        //}
-        //PlayerPrefs.SetInt("TimePlayed", PlayerPrefs.GetInt("TimePlayed") +1);
-        //if (PlayerPrefs.GetInt("TimePlayed") >=3)
-        //{
-        //    //ABCManager.firebaseCounter = 0;
-        //if (ABCManager.instance != null)
-        //{
-        //    ABCManager.instance.ShowFireB();
-        //}
-        InitializeFirebase_CB.instance.LogFirebaseEvent("Letter_" + PlayerPrefs.GetString("SelectedAlphabet") + "_Completed");//remove later
-        //    Debug.Log("Letter_" + PlayerPrefs.GetString("SelectedAlphabet") + "_Completed");
+       // PlayerPrefs.SetString("SelectedAlphabet", nextL);
 
-        PlayerPrefs.SetString("SelectedAlphabet", nextL);
+         // ABCManager.instance.ShowCelebration();
 
-          ABCManager.instance.ShowCelebration();
-        //}
+
+        PlayerPrefs.SetInt("TimePlayed", PlayerPrefs.GetInt("TimePlayed") + 1);
+        if (PlayerPrefs.GetInt("TimePlayed") >= 3)
+        {
+            //ABCManager.firebaseCounter = 0;
+            //InitializeFirebase_CB._Instance.LogFirebaseEvent("Letter_" + PlayerPrefs.GetString("SelectedAlphabet") + "_Completed");//remove later
+            Debug.Log("Letter_" + PlayerPrefs.GetString("SelectedAlphabet") + "_Completed");
+            PlayerPrefs.SetString("SelectedAlphabet", nextL);
+            ABCManager.instance.ShowCelebration();
+        }
         /*else if(ABCManager.instance.RateUsEnable && PlayerPrefs.GetInt("TimePlayed") >= 3)
         {
             ABCManager.instance.RateUsPanel.SetActive(true);
         }*/
-        //else
-       // {
+        else
+        {
             //InitializeFirebase_CB._Instance.LogFirebaseEvent("Letter_" + PlayerPrefs.GetString("SelectedAlphabet") + "_nextTexture");//remove later
-            //Debug.Log("Letter_" + PlayerPrefs.GetString("SelectedAlphabet") + "_nextTexture");
-            //ABCManager.instance.ShowCelebration();
-       // }
+            Debug.Log("Letter_" + PlayerPrefs.GetString("SelectedAlphabet") + "_nextTexture");
+            ABCManager.instance.ShowCelebration();
+        }
     }
     void loadNext()
     {

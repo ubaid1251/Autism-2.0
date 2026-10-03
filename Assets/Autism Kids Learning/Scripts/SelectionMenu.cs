@@ -11,12 +11,15 @@ public class SelectionMenu : MonoBehaviour
     public GameObject[] Colors,LockColors;
     public GameObject pnel,parental;
     public GameObject ProfilerBtns,UI_Obj,Selection;
+    public GameObject Viewpoint;
     private void Awake()
     {
+        RectTransform rect = Viewpoint.GetComponent<RectTransform>();
         if (PlayerPrefs.GetInt("RemoveAds") == 1)
         {
             UI_Obj.transform.GetComponent<RectTransform>().anchoredPosition = new Vector3(0, 0, 0);
-            Selection.transform.GetComponent<RectTransform>().DOLocalMove(new Vector3(0f,-66f,0), 0.1f);
+            Selection.transform.GetComponent<RectTransform>().DOLocalMove(new Vector3(0f,180f,0), 0.001f);
+            rect.offsetMin = new Vector2(rect.offsetMin.x, -132f);
         }
         if (PlayerPrefs.GetInt("Purchased") == 1)
         {
@@ -29,6 +32,10 @@ public class SelectionMenu : MonoBehaviour
         {
             ProfilerBtns.transform.localPosition = new Vector3(0, 0, 0);
         }
+    }
+    private void Update()
+    {
+        print(Selection.transform.GetComponent<RectTransform>());
     }
     void Start()
     {

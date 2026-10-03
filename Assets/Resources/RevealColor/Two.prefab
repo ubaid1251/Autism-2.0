@@ -51,6 +51,9 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -102,7 +105,7 @@ MonoBehaviour:
   - {x: -0.73, y: 1.99, z: 0}
   - {x: 1.34, y: 0.55, z: 0}
   - {x: 3.19, y: 1.07, z: 0}
-  progreess: {fileID: 8119884410085957293}
+  progreess: {fileID: 4684238495029190025}
 --- !u!1 &2117100595977028063
 GameObject:
   m_ObjectHideFlags: 0
@@ -112,7 +115,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5349926127048906797}
-  - component: {fileID: 4556923203736173507}
+  - component: {fileID: 3981916248033913495}
   m_Layer: 0
   m_Name: ScratchCardManager
   m_TagString: Untagged
@@ -137,7 +140,7 @@ Transform:
   - {fileID: 3093004242262732734}
   m_Father: {fileID: 7814858190542047010}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4556923203736173507
+--- !u!114 &3981916248033913495
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -146,7 +149,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2117100595977028063}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1091e69478f334e5c995b30d9b122da3, type: 3}
+  m_Script: {fileID: 11500000, guid: 8e69f6c0e3da4b040ab2f2cefa9d80ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   MainCamera: {fileID: 0}
@@ -157,9 +160,9 @@ MonoBehaviour:
   EraseTexture: {fileID: 2800000, guid: eef5a9056291fba45ad50d97817d14ae, type: 3}
   EraseTextureScale: {x: 0.7, y: 0.7}
   InputEnabled: 1
-  Card: {fileID: 729578197570795278}
+  Card: {fileID: 8823218763279435063}
   Mode: 1
-  Progress: {fileID: 8119884410085957293}
+  Progress: {fileID: 4684238495029190025}
   MeshCard: {fileID: 0}
   SpriteCard: {fileID: 7877356308715904176}
   ImageCard: {fileID: 0}
@@ -207,7 +210,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &2766397801328101761
 Animator:
-  serializedVersion: 5
+  serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -221,6 +224,7 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
@@ -250,7 +254,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: bea32311c6bcf6544942742af3b90627, type: 3}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: bea32311c6bcf6544942742af3b90627, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -358,7 +363,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 521b4a3f018e14551972c785e46e5a83, type: 3}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: 521b4a3f018e14551972c785e46e5a83, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -453,8 +459,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8978858438593089438}
-  - component: {fileID: 729578197570795278}
-  - component: {fileID: 8119884410085957293}
+  - component: {fileID: 8823218763279435063}
+  - component: {fileID: 4684238495029190025}
   m_Layer: 0
   m_Name: Scratch Card
   m_TagString: Untagged
@@ -477,7 +483,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5349926127048906797}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &729578197570795278
+--- !u!114 &8823218763279435063
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -486,7 +492,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2838574675087234513}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 444b8500698854b63ac5ae06ea55cb6e, type: 3}
+  m_Script: {fileID: 11500000, guid: 45638a7b43d7d8c4f8e38a6e14e6a096, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   MainCamera: {fileID: 0}
@@ -505,8 +511,8 @@ MonoBehaviour:
   - {fileID: 7841588970330254087}
   dummy: {fileID: 7654439894432983316}
   _mode: 1
-  EraseProgress: {fileID: 8119884410085957293}
---- !u!114 &8119884410085957293
+  EraseProgress: {fileID: 4684238495029190025}
+--- !u!114 &4684238495029190025
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -515,10 +521,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2838574675087234513}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 094d449eda6fe41dfa30fa9424593a15, type: 3}
+  m_Script: {fileID: 11500000, guid: bb177a93030339c4ca6e1f890b37e2ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Card: {fileID: 729578197570795278}
+  Card: {fileID: 8823218763279435063}
   isCompleted: 0
   SoundObject: {fileID: 7870519570481992091}
   eraseDone: 0
@@ -571,6 +577,9 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -593,7 +602,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -72779221
-  m_SortingLayer: 2
+  m_SortingLayer: 0
   m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: 6f26317ffca7d42689abc48ac6047521, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -656,6 +665,9 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -678,7 +690,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -72779221
-  m_SortingLayer: 2
+  m_SortingLayer: 0
   m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: 916427cfb53ea4a1d921e4a9e3c87007, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -741,6 +753,9 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -763,7 +778,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -72779221
-  m_SortingLayer: 2
+  m_SortingLayer: 0
   m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: e650863b5380f494f82e9801c4464ac4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -832,6 +847,8 @@ MonoBehaviour:
   bgmOff: {fileID: 0}
   vibOn: {fileID: 0}
   VibOff: {fileID: 0}
+  setng: {fileID: 0}
+  setng2: {fileID: 0}
   selectCh: {fileID: 0}
   click: {fileID: 0}
   tap: {fileID: 0}
@@ -887,6 +904,9 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -971,6 +991,9 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1056,6 +1079,9 @@ TrailRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1200,6 +1226,9 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1222,7 +1251,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -72779221
-  m_SortingLayer: 2
+  m_SortingLayer: 0
   m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: 6f26317ffca7d42689abc48ac6047521, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

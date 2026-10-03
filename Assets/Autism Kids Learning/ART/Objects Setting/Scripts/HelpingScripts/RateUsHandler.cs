@@ -56,7 +56,7 @@ public class RateUsHandler : MonoBehaviour
     {
         if (PlayerPrefs.GetInt("RateDone") == 0)
         {
-            if ((PlayerPrefs.GetInt("RateCounter") % 2 == 0) && PlayerPrefs.GetInt("Completed") == 1 )
+            if ((PlayerPrefs.GetInt("RateCounter") % 4 == 0) && PlayerPrefs.GetInt("Completed") == 1 )
             {
                 PlayerPrefs.SetInt("RateUsAppear", PlayerPrefs.GetInt("RateUsAppear") + 1);
                 Debug.Log("5 Time RateUs " + PlayerPrefs.GetInt("RateUsAppear"));

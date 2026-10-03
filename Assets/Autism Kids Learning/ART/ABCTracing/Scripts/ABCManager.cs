@@ -53,17 +53,21 @@ public class ABCManager : MonoBehaviour
         instance = this;
         tapS = GetComponent<AudioSource>();
         string Path = null;
-        //if (PlayerPrefs.GetString("SelectedMode") == "NumbersLearning")
+        if (PlayerPrefs.GetInt("ModeTrace") == 1)
+        {
+            Path = "ABCLearning";
+        }
+        else if (PlayerPrefs.GetInt("ModeTrace") == 2)
+        {
+            Path = "123Learning";
+        }
+        //else if (PlayerPrefs.GetInt("ModeTrace") == 2)
         //{
-          //  Path = "123Learning";
-        //}
-        //else if (PlayerPrefs.GetString("SelectedMode") == "abcLearning")
-        //{
-        //    Path = "SmallABCLearning";
+        //    Path = "123Learning";
         //}
         //else if (PlayerPrefs.GetString("SelectedMode") == "ABCLearning")
         //{
-            Path = "ABCLearning";
+        //    Path = "ABCLearning";
         //}
 
         bg.color = HexToColor(colorCodes[Random.Range(0, colorCodes.Length)]);
@@ -113,30 +117,30 @@ public class ABCManager : MonoBehaviour
 
     public void ShowCelebration()
     {
-        //float fillerAm = PlayerPrefs.GetFloat("FillAmount");
-        //filler.DOFillAmount(fillerAm, 0);
-        //if (fillerAm < .9f)
-        //{
-        //    CelebrationPanel.SetActive(true);
-        //    //PlayerPrefs.SetFloat("FillAmount", PlayerPrefs.GetFloat("FillAmount") + .33f);
-        //    fillerAm = PlayerPrefs.GetFloat("FillAmount");
-        //    filler.DOFillAmount(fillerAm, 2).OnComplete(() =>
-        //    {
-        //        if (fillerAm < .9f)
-        //        {
-        //            //PlayerPrefs.SetFloat("FillAmount", 0);
-        //            //PlayerPrefs.SetInt("TimePlayed", 0);    
-        //            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        //        }
-        //        else
-        //        {
-        //            CelebrationPanel.SetActive(false);
+        float fillerAm = PlayerPrefs.GetFloat("FillAmount");
+        filler.DOFillAmount(fillerAm, 0);
+        if (fillerAm < .9f)
+        {
+            CelebrationPanel.SetActive(true);
+            PlayerPrefs.SetFloat("FillAmount", PlayerPrefs.GetFloat("FillAmount") + .33f);
+            fillerAm = PlayerPrefs.GetFloat("FillAmount");
+            filler.DOFillAmount(fillerAm, 2).OnComplete(() =>
+            {
+                if (fillerAm < .9f)
+                {
+                    //PlayerPrefs.SetFloat("FillAmount", 0);
+                    //PlayerPrefs.SetInt("TimePlayed", 0);    
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                }
+                else
+                {
+                    CelebrationPanel.SetActive(false);
 
-        //            ShowAnim();
-        //        }
-        //    });
-        //}
-        ShowAnim();
+                    ShowAnim();
+                }
+            });
+        }
+        //ShowAnim();
     }
 
     public void ShowAnim()
@@ -207,7 +211,14 @@ public class ABCManager : MonoBehaviour
         InitializeFirebase_CB.instance.LogFirebaseEvent(SceneManager.GetActiveScene().name + "_Switched_ByHome");
         DOTween.KillAll(false);
         IntitializeAdmob.instance.ShowInterstitial();
-        SceneManager.LoadScene("TraceSelection");
+        if (PlayerPrefs.GetInt("ModeTrace") == 1)
+        {
+            SceneManager.LoadScene("TraceSelection");
+        }
+        else if (PlayerPrefs.GetInt("ModeTrace") == 2)
+        {
+            SceneManager.LoadScene("Trace123Selection");
+        }
     }
 
     public void destroyP(GameObject g)

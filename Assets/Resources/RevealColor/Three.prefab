@@ -36,7 +36,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &7453836406284734132
 Animator:
-  serializedVersion: 5
+  serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -50,6 +50,7 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
@@ -112,6 +113,8 @@ MonoBehaviour:
   bgmOff: {fileID: 0}
   vibOn: {fileID: 0}
   VibOff: {fileID: 0}
+  setng: {fileID: 0}
+  setng2: {fileID: 0}
   selectCh: {fileID: 0}
   click: {fileID: 0}
   tap: {fileID: 0}
@@ -126,8 +129,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1000193184545250680}
-  - component: {fileID: 5175816396969618938}
-  - component: {fileID: 2508695527897565621}
+  - component: {fileID: 7904885777250879076}
+  - component: {fileID: 5124657950943806238}
   m_Layer: 0
   m_Name: Scratch Card
   m_TagString: Untagged
@@ -150,7 +153,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3235745809672027854}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5175816396969618938
+--- !u!114 &7904885777250879076
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -159,7 +162,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1131788642860803888}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 444b8500698854b63ac5ae06ea55cb6e, type: 3}
+  m_Script: {fileID: 11500000, guid: 45638a7b43d7d8c4f8e38a6e14e6a096, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   MainCamera: {fileID: 0}
@@ -178,8 +181,8 @@ MonoBehaviour:
   otherToOff: []
   dummy: {fileID: 8930955714594644177}
   _mode: 1
-  EraseProgress: {fileID: 2508695527897565621}
---- !u!114 &2508695527897565621
+  EraseProgress: {fileID: 5124657950943806238}
+--- !u!114 &5124657950943806238
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -188,10 +191,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1131788642860803888}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 094d449eda6fe41dfa30fa9424593a15, type: 3}
+  m_Script: {fileID: 11500000, guid: bb177a93030339c4ca6e1f890b37e2ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Card: {fileID: 5175816396969618938}
+  Card: {fileID: 7904885777250879076}
   isCompleted: 0
   SoundObject: {fileID: 0}
   eraseDone: 0
@@ -244,6 +247,9 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -329,6 +335,9 @@ TrailRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -480,7 +489,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 5a3f28b8fd15eca4cb3ab071fe4c723a, type: 3}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: 5a3f28b8fd15eca4cb3ab071fe4c723a, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -576,7 +586,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: afeda288e2e1744aab2a65094f670735, type: 3}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: afeda288e2e1744aab2a65094f670735, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -671,7 +682,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3235745809672027854}
-  - component: {fileID: 6542801259805509453}
+  - component: {fileID: 8961071317198293951}
   m_Layer: 0
   m_Name: ScratchCardManager
   m_TagString: Untagged
@@ -696,7 +707,7 @@ Transform:
   - {fileID: 4125022418688089915}
   m_Father: {fileID: 1343910264781596621}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6542801259805509453
+--- !u!114 &8961071317198293951
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -705,7 +716,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6886756071732631704}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1091e69478f334e5c995b30d9b122da3, type: 3}
+  m_Script: {fileID: 11500000, guid: 8e69f6c0e3da4b040ab2f2cefa9d80ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   MainCamera: {fileID: 0}
@@ -716,9 +727,9 @@ MonoBehaviour:
   EraseTexture: {fileID: 2800000, guid: eef5a9056291fba45ad50d97817d14ae, type: 3}
   EraseTextureScale: {x: 0.7, y: 0.7}
   InputEnabled: 1
-  Card: {fileID: 5175816396969618938}
+  Card: {fileID: 7904885777250879076}
   Mode: 1
-  Progress: {fileID: 2508695527897565621}
+  Progress: {fileID: 5124657950943806238}
   MeshCard: {fileID: 0}
   SpriteCard: {fileID: 1967183625101398651}
   ImageCard: {fileID: 0}
@@ -777,6 +788,9 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -828,7 +842,7 @@ MonoBehaviour:
   - {x: -1.08, y: 2.01, z: 0}
   - {x: 0.37, y: -0.22, z: 0}
   - {x: 1.79, y: 2.23, z: 0}
-  progreess: {fileID: 2508695527897565621}
+  progreess: {fileID: 5124657950943806238}
 --- !u!1 &9002180570414818444
 GameObject:
   m_ObjectHideFlags: 0
@@ -879,6 +893,9 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:

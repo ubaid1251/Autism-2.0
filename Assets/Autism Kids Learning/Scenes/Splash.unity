@@ -202,7 +202,7 @@ MonoBehaviour:
   BannerData:
     bannerAdUnitIds: ca-app-pub-4103477709439075/1133287680
     secondBannerAdUnitIds: 
-    BadsPosition: 0
+    badsPosition: 0
     secondBadsPosition: 0
     bannerType: 3
     secondBannerType: 3

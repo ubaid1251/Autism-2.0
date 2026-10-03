@@ -54,10 +54,16 @@ EditorBuildSettings:
     path: Assets/Autism Kids Learning/Scenes/MatchNumbers.unity
     guid: e058cf2620783ec48a3a56e4f834275d
   - enabled: 1
+    path: Assets/Autism Kids Learning/Scenes/MatchObjects.unity
+    guid: f7d952500bf626a4d95023b78be9f785
+  - enabled: 1
     path: Assets/Autism Kids Learning/Scenes/Abc Trace/TraceSelection.unity
     guid: a49e86683638c4d06a844a97d5993452
   - enabled: 1
     path: Assets/Autism Kids Learning/Scenes/Abc Trace/ABCTrace.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Autism Kids Learning/Scenes/Abc Trace/Trace123Selection.unity
+    guid: 306cbf909fb6d3f4da73b5c96304076a
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

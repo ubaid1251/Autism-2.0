@@ -10,7 +10,7 @@ public class BalloonGenerator : MonoBehaviour
 
     // Reference to the parent transform
     public Transform parentTransform;
-
+    public RectTransform nxt;
     // Horizontal range for the random position
     public float horizontalMin;
     public float horizontalMax;
@@ -24,7 +24,14 @@ public class BalloonGenerator : MonoBehaviour
     public LoadingHandler loader;
     // Time interval between balloon generation
     float interval = 0.25f;
-
+    private void Awake()
+    {
+        if (PlayerPrefs.GetInt("RemoveAds") == 1)
+        {
+            nxt.DOAnchorPosY(-180, 0); //remove later
+        }
+        
+    }
     void Start()
     { 
         StartCoroutine(GenerateBalloons());
